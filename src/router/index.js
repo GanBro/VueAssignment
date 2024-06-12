@@ -1,23 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../pages/Home.vue';
-import Sites from '../pages/Sites.vue';
-import History from '../pages/History.vue';
-import Events from '../pages/Events.vue';
-import Guides from '../pages/Guides.vue';
-import Community from '../pages/Community.vue';
+import HomePage from '../pages/HomePage.vue';
 import About from '../pages/About.vue';
-import SiteDetail from '../pages/SiteDetail.vue';
+import Landmarks from '../pages/Landmarks.vue';
+import Nature from '../pages/Nature.vue';
+import Research from '../pages/Research.vue';
+import Culture from '../pages/Culture.vue';
+import Festivals from '../pages/Festivals.vue';
 
 const routes = [
-  { path: '/', component: Home },
-  { path: '/sites', component: Sites },
-  { path: '/history', component: History },
-  { path: '/events', component: Events },
-  { path: '/guides', component: Guides },
-  { path: '/community', component: Community },
+  { path: '/', component: HomePage },
   { path: '/about', component: About },
-  { path: '/site/:id', component: SiteDetail },  // 动态路由
+  { path: '/landmarks', component: Landmarks },
+  { path: '/nature', component: Nature },
+  { path: '/research', component: Research },
+  { path: '/culture', component: Culture },
+  { path: '/festivals', component: Festivals },
+  { path: '/site/:id', component: Festivals },  // 动态路由，假设是详情页面
 ];
+
 
 const router = createRouter({
   history: createWebHistory(),

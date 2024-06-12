@@ -1,13 +1,17 @@
 <template>
-  <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
-    <el-menu-item index="/" @click="navigate('/')">首页</el-menu-item>
-    <el-menu-item index="/sites" @click="navigate('/sites')">景点列表</el-menu-item>
-    <el-menu-item index="/history" @click="navigate('/history')">历史介绍</el-menu-item>
-    <el-menu-item index="/events" @click="navigate('/events')">活动资讯</el-menu-item>
-    <el-menu-item index="/guides" @click="navigate('/guides')">旅游攻略</el-menu-item>
-    <el-menu-item index="/community" @click="navigate('/community')">游客互动</el-menu-item>
-    <el-menu-item index="/about" @click="navigate('/about')">关于我们/联系我们</el-menu-item>
-  </el-menu>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
+        <el-menu-item index="/" @click="navigate('/')">首页</el-menu-item>
+        <el-menu-item index="/about" @click="navigate('/about')">关于九寨</el-menu-item>
+        <el-menu-item index="/landmarks" @click="navigate('/landmarks')">标志景点</el-menu-item>
+        <el-menu-item index="/nature" @click="navigate('/nature')">自然与动物</el-menu-item>
+        <el-menu-item index="/research" @click="navigate('/research')">科研与保护</el-menu-item>
+        <el-menu-item index="/culture" @click="navigate('/culture')">历史与文化</el-menu-item>
+        <el-menu-item index="/festivals" @click="navigate('/festivals')">传统节庆</el-menu-item>
+      </el-menu>
+    </div>
+  </nav>
 </template>
 
 <script>
