@@ -3,57 +3,42 @@
     <Navbar />
     <el-container>
       <el-header>
-        <h1>欢迎来到旅游景点介绍网站</h1>
+        <h2>首页</h2>
       </el-header>
       <el-main>
-        <el-row :gutter="20">
-          <el-col :span="8" v-for="site in sites" :key="site.id">
-            <el-card shadow="hover">
-              <img src="https://img2.baidu.com/it/u=3227619927,365499885&fm=253&app=120&size=w931&n=0&f=JPEG&fmt=auto?sec=1718211600&t=d671ccb956f05e6fb83200109e97cae4" alt="tourist site image" class="image"/>
-              <div style="padding: 14px;">
-                <span>{{ site.name }}</span>
-                <div class="bottom clearfix">
-                  <el-button type="text" @click="navigateToSite(site.id)">查看详情</el-button>
-                </div>
-              </div>
-            </el-card>
-          </el-col>
-        </el-row>
+        <div class="fullscreen-div">
+          <img src="@/assets/首页01.png" alt="A Fullscreen Image">
+        </div>
       </el-main>
     </el-container>
+
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
 import Navbar from '@/components/AppNavbar.vue';
 
 export default {
   components: {
     Navbar,
   },
-  computed: {
-    ...mapState(['sites']),
-  },
-  methods: {
-    navigateToSite(siteId) {
-      this.$router.push(`/site${siteId}`);
-    },
-  },
 };
 </script>
 
 <style scoped>
-.image {
+.fullscreen-div {
+  position: fixed; /* 或使用absolute，取决于你的具体需求 */
+  top: 0;
+  left: 0;
+  width: 100vw; /* 视口宽度 */
+  height: 100vh; /* 视口高度 */
+  z-index: -1; /* 根据需要调整，确保div不会遮挡页面上的其他元素 */
+  overflow: hidden;
+}
+
+.fullscreen-div img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-.el-card {
-  margin-bottom: 20px;
-}
-.bottom {
-  margin-top: 10px;
-  line-height: 12px;
+  height: 100%;
+  object-fit: cover; /* 保证图片覆盖整个div且不变形 */
 }
 </style>
