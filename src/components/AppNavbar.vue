@@ -39,5 +39,12 @@ export default {
   background-color: #545c64;
   color: white;
 }
+.navbar {
+  position: fixed; /* 固定导航栏 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; /* 确保导航栏在最上层 */
+  background-color: #545c64; /* 背景色，可根据需要调整 */
+}
 </style>
-<!--2-->

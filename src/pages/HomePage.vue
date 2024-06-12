@@ -3,7 +3,7 @@
     <Navbar />
     <el-container>
       <el-header>
-        <h2>首页</h2>
+        <!--        <h2>首页</h2>-->
       </el-header>
       <el-main>
         <div class="fullscreen-div">
@@ -25,7 +25,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .fullscreen-div {
   position: fixed; /* 或使用absolute，取决于你的具体需求 */
   top: 0;
@@ -41,4 +41,5 @@ export default {
   height: 100%;
   object-fit: cover; /* 保证图片覆盖整个div且不变形 */
 }
+
 </style>
