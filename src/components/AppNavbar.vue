@@ -1,12 +1,12 @@
 <template>
   <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
-    <el-menu-item index="1" @click="navigate('/')">Home</el-menu-item>
-    <el-menu-item index="2" @click="navigate('/site1')">Site 1</el-menu-item>
-    <el-menu-item index="3" @click="navigate('/site2')">Site 2</el-menu-item>
-    <el-menu-item index="4" @click="navigate('/site3')">Site 3</el-menu-item>
-    <el-menu-item index="5" @click="navigate('/site4')">Site 4</el-menu-item>
-    <el-menu-item index="6" @click="navigate('/site5')">Site 5</el-menu-item>
-    <el-menu-item index="7" @click="navigate('/site6')">Site 6</el-menu-item>
+    <el-menu-item index="/" @click="navigate('/')">首页</el-menu-item>
+    <el-menu-item index="/sites" @click="navigate('/sites')">景点列表</el-menu-item>
+    <el-menu-item index="/history" @click="navigate('/history')">历史介绍</el-menu-item>
+    <el-menu-item index="/events" @click="navigate('/events')">活动资讯</el-menu-item>
+    <el-menu-item index="/guides" @click="navigate('/guides')">旅游攻略</el-menu-item>
+    <el-menu-item index="/community" @click="navigate('/community')">游客互动</el-menu-item>
+    <el-menu-item index="/about" @click="navigate('/about')">关于我们/联系我们</el-menu-item>
   </el-menu>
 </template>
 
@@ -14,8 +14,13 @@
 export default {
   data() {
     return {
-      activeIndex: '1',
+      activeIndex: this.$route.path,
     };
+  },
+  watch: {
+    $route(to) {
+      this.activeIndex = to.path;
+    }
   },
   methods: {
     navigate(path) {

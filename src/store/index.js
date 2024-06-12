@@ -11,12 +11,22 @@ const store = createStore({
                 { id: 5, name: 'Site 5', description: 'Description for site 5' },
                 { id: 6, name: 'Site 6', description: 'Description for site 6' },
             ],
+            events: [
+                { id: 1, name: 'Event 1', details: 'Details for event 1' },
+                { id: 2, name: 'Event 2', details: 'Details for event 2' },
+            ],
+            guides: [
+                { id: 1, name: 'Guide 1', content: 'Content for guide 1' },
+                { id: 2, name: 'Guide 2', content: 'Content for guide 2' },
+            ],
+            // other state variables as needed
         };
     },
     getters: {
         getSiteById: (state) => (id) => {
             return state.sites.find(site => site.id === id);
-        }
+        },
+        // other getters as needed
     }
 });
 

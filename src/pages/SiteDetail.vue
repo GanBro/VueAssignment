@@ -1,7 +1,14 @@
 <template>
   <div>
     <Navbar />
-    <site-card :site="site4" />
+    <el-container>
+      <el-header>
+        <h2>{{ site.name }}</h2>
+      </el-header>
+      <el-main>
+        <site-card :site="site" />
+      </el-main>
+    </el-container>
   </div>
 </template>
 
@@ -17,8 +24,8 @@ export default {
   },
   computed: {
     ...mapGetters(['getSiteById']),
-    site4() {
-      return this.getSiteById(4);
+    site() {
+      return this.getSiteById(parseInt(this.$route.params.id));
     },
   },
 };

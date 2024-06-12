@@ -1,20 +1,22 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../pages/Home.vue';
-import Site1 from '../pages/Site1.vue';
-import Site2 from '../pages/Site2.vue';
-import Site3 from '../pages/Site3.vue';
-import Site4 from '../pages/Site4.vue';
-import Site5 from '../pages/Site5.vue';
-import Site6 from '../pages/Site6.vue';
+import Sites from '../pages/Sites.vue';
+import History from '../pages/History.vue';
+import Events from '../pages/Events.vue';
+import Guides from '../pages/Guides.vue';
+import Community from '../pages/Community.vue';
+import About from '../pages/About.vue';
+import SiteDetail from '../pages/SiteDetail.vue';
 
 const routes = [
   { path: '/', component: Home },
-  { path: '/site1', component: Site1 },
-  { path: '/site2', component: Site2 },
-  { path: '/site3', component: Site3 },
-  { path: '/site4', component: Site4 },
-  { path: '/site5', component: Site5 },
-  { path: '/site6', component: Site6 },
+  { path: '/sites', component: Sites },
+  { path: '/history', component: History },
+  { path: '/events', component: Events },
+  { path: '/guides', component: Guides },
+  { path: '/community', component: Community },
+  { path: '/about', component: About },
+  { path: '/site/:id', component: SiteDetail },  // 动态路由
 ];
 
 const router = createRouter({
