@@ -32,6 +32,5 @@ body, html, #app {
 
 .el-main {
   padding-top: 60px; !* 确保主内容区域在导航栏下方 *!
-  height: calc(100vh - 60px); !* 减去导航栏高度 *!
 }*/
 </style>

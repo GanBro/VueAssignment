@@ -1,6 +1,6 @@
 <template>
   <div class="about-page">
-    <div class="about-container">
+    <div class="about-container ">
       <div class="left-pane">
         <!-- 左侧内容 -->
       </div>
@@ -202,8 +202,8 @@
           </div>
         </div>
       </el-card>
+      <br><br>
     </div>
-
   </div>
 </template>
 
@@ -386,5 +386,9 @@ export default {
   margin-top: 10px; /* 图片与文字之间的间距 */
   font-size: 16px;
   color: #656a7b;
+}
+.grey-background {
+  background-color: rgb(128, 128, 128);
+  min-height: 100vh; /* 确保背景颜色覆盖整个视口高度,没有这个就能改成蓝色 */
 }
 </style>
