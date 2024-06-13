@@ -85,23 +85,34 @@ export default {
 }
 
 .title {
-  font-size: 48px; /* 设置字体大小 */
-  font-weight: bold; /* 设置字体粗细 */
-  text-align: center; /* 文字居中 */
-  margin-bottom: 20px; /* 标题下方留出空间 */
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-family: 'Quando', sans-serif; /* 使用指定的字体 */
+  font-size: 36px; /* 字体大小 */
+  line-height: 54px; /* 行高 */
+  color: #152248; /* 字体颜色 */
+  font-weight: 400; /* 字体粗细 */
+  font-style: normal; /* 字体样式 */
+  text-transform: none; /* 文本大小写转换 */
+  text-decoration: none; /* 文本装饰 */
+  text-align: left; /* 文本对齐方式 */
 }
+
 
 .body-content {
   text-align: left; /* 正文左对齐 */
-  font-size: 16px; /* 设置正文字体大小 */
-  line-height: 1.5; /* 设置行高 */
+  font-family: 'Domine', sans-serif; /* 使用指定的字体 */
+  font-size: 18.4px; /* 字体大小 */
+  line-height: 27.6px; /* 行高 */
+  color: #656a7b; /* 字体颜色 */
   width: 100%; /* 内容占满宽度 */
   padding-left: 20px; /* 增加正文左边距 */
   padding-right: 20px; /* 增加正文右边距 */
 }
 
 .body-content p {
-  text-indent: 2em; /* 首行缩进两格 */
+  text-indent: 2em; /* 段落首行缩进两格 */
   margin: 0 0 10px; /* 段落间距 */
 }
+
 </style>
