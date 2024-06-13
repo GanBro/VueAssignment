@@ -2,10 +2,10 @@
   <div class="about-page">
     <div class="about-container">
       <div class="left-pane">
-<!--        <p>左侧内容</p>-->
+        <!-- 左侧内容 -->
       </div>
       <div class="right-pane">
-<!--        <p>右侧内容</p>-->
+        <!-- 右侧内容 -->
       </div>
     </div>
     <div class="center-card1">
@@ -32,7 +32,7 @@
         </div>
       </el-card>
     </div>
-    <!-- 新增的卡片 -->
+
     <div class="center-card2">
       <el-card class="box-card2">
         <div class="card-content">
@@ -45,11 +45,11 @@
             <!-- 图片部分 -->
             <div class="image-container">
               <figure>
-                <img src="@/assets/树正群海.png" alt="盆景滩">
+                <img src="@/assets/树正群海.png" alt="树正群海">
                 <figcaption>树正群海</figcaption>
               </figure>
               <figure>
-                <img src="@/assets/诺日朗瀑布.png" alt="芦苇海">
+                <img src="@/assets/诺日朗瀑布.png" alt="诺日朗瀑布">
                 <figcaption>诺日朗瀑布</figcaption>
               </figure>
             </div>
@@ -57,6 +57,31 @@
         </div>
       </el-card>
     </div>
+
+    <!-- 第三个卡片 -->
+    <div class="center-card3">
+      <el-card class="box-card3">
+        <div class="card-content">
+          <p class="title">童话世界</p>
+          <div class="body-content">
+            <p>目前，九寨沟景区仅保留了树正寨、荷叶寨、则查洼寨这三个村寨，善良淳朴的他们，用微笑迎接着前来九寨沟的每一个人。而在这些村寨中，最壮观的莫过于树正寨前的“九宝莲花菩提塔”，七彩经幡随风飘荡，圣洁的白塔在阳光下仿若闪着光，这里也是众多游客到来时，都会双手合十，轻声祭拜的地方。</p>
+            <p>九寨沟是大自然鬼斧神工之杰作。这里四周雪峰高耸，湖水清澈艳丽，飞瀑多姿多彩，急流汹涌澎湃，林木青葱婆娑。蓝蓝的天空，明媚的阳光，清新的空气和点缀其间的古老村寨、栈桥、磨坊，组成了一幅内涵丰富、和谐统一的优美画卷，历来被当地藏族同胞视为“神山圣水”。九寨沟景区享誉中外，东方人称之为“人间仙境”，西方人则将之誉为“童话世界”。</p>
+            <!-- 图片部分 -->
+            <div class="image-container">
+              <figure>
+                <img src="@/assets/树正寨.png" alt="树正群海">
+                <figcaption>树正寨</figcaption>
+              </figure>
+              <figure>
+                <img src="@/assets/桃花摇曳.png" alt="诺日朗瀑布">
+                <figcaption>桃花摇曳</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </el-card>
+    </div>
+
   </div>
 </template>
 
@@ -82,7 +107,7 @@ export default {
 
 .left-pane, .right-pane {
   flex: 1; /* 左右面板各占一半 */
-  height: 2200px; /* 左右面板高度 */
+  height: 2050px; /* 左右面板高度 */
   display: flex; /* 允许子元素使用flex布局 */
   justify-content: center; /* 水平居中 */
   align-items: center; /* 垂直居中 */
@@ -96,7 +121,7 @@ export default {
   background-color: rgb(226, 252, 203); /* 右侧面板背景色 */
 }
 
-.center-card1, .center-card2 {
+.center-card1, .center-card2, .center-card3 {
   position: absolute; /* 使用绝对定位 */
   left: 50%; /* 固定的左侧位置 */
   transform: translateX(-50%); /* 使卡片水平居中 */
@@ -111,6 +136,10 @@ export default {
   top: 800px; /* 固定的顶部位置 */
 }
 
+.center-card3 {
+  top: 1620px; /* 第三个卡片的位置 */
+}
+
 .box-card1 {
   width: 1100px; /* 卡片宽度 */
   height: 700px; /* 卡片高度 */
@@ -119,11 +148,16 @@ export default {
 }
 .box-card2 {
   width: 1100px; /* 卡片宽度 */
-  height: 760px; /* 卡片高度 */
+  height: 770px; /* 卡片高度 */
   overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
   padding: 20px; /* 增加卡片内边距 */
 }
-
+.box-card3 {
+  width: 1100px; /* 卡片宽度 */
+  height: 730px; /* 卡片高度 */
+  overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
+  padding: 20px; /* 增加卡片内边距 */
+}
 .card-content {
   display: flex;
   flex-direction: column; /* 垂直排列标题和正文 */
@@ -143,7 +177,7 @@ export default {
   font-style: normal; /* 字体样式 */
   text-transform: none; /* 文本大小写转换 */
   text-decoration: none; /* 文本装饰 */
-  text-align: center; /* 文本居中对齐 */
+  text-align: center;
 }
 
 .body-content {
