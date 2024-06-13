@@ -129,6 +129,81 @@
       </el-card>
     </div>
 
+    <!-- 第六个卡片 -->
+    <div class="center-card6">
+      <el-card class="box-card6">
+        <div class="card-content">
+          <p class="title">彩林漫漫，炫雅妩媚</p>
+          <div class="body-content">
+            <p>春日，九寨沟呈现着季节更替的慌忙景象，山林还是一片残冬，长海尚未解冻，山脚下却早已是一幅初春画卷，野桃花开得如火如荼，在春阳下摇摆着一树花枝，将浓烈的春意诉说。天空湛蓝碧净，更衬得一树的花朵玲珑可爱，一簇簇拥挤在一起，争抢着呼吸春的气息。</p>
+            <p>五彩斑斓的世界深沉且厚重，彩色的湖水、彩色的天空、彩色的世界，她似一个少女，藏着五彩斑斓的心事；她秀美婉约，灵动优雅，秋阳点染着静谧的山谷，树树含着秋韵，山山堆着落晖。</p>
+            <p>缤纷的落叶在湖光流韵间漂浮，悠远的晴空碧净而湛蓝，秋天的九寨沟美得仿佛不真实，无时无刻不在演绎着赤、橙、黄、绿、青、蓝、紫的梦幻组合，古人说的“造化钟神秀”，也就不过如此吧。</p>
+            <div class="image-container">
+              <figure>
+                <img src="@/assets/6.1.png">
+              </figure>
+              <figure>
+                <img src="@/assets/6.2.png">
+              </figure>
+              <figure>
+                <img src="@/assets/6.3.png">
+              </figure>
+            </div>
+          </div>
+        </div>
+      </el-card>
+    </div>
+
+    <!-- 第七个卡片 -->
+    <div class="center-card7">
+      <el-card class="box-card7">
+        <div class="card-content">
+          <p class="title">夏绿九寨，恣意清凉</p>
+          <div class="body-content">
+            <p>缤纷的落叶在湖光流韵间漂浮，悠远的晴空碧净而湛蓝，秋天的九寨沟美得仿佛不真实，无时无刻不在演绎着赤、橙、黄、绿、青、蓝、紫的梦幻组合，古人说的“造化钟神秀”，也就不过如此吧。</p>
+            <p>森林树脂的清新，海子浓淡相宜的妆容，银帘般的瀑布抒发四季中最为恣意的激情，凉爽的夏风吹拂着经幡。此时此刻，天是蓝的，树是绿的，海子是斑斓不可言说的，心情是自由的……</p>
+            <p>骄阳流金，蝉鸣踏歌，萤火森森，这样的九寨总是让人仿佛置身在桃花源的仙境里，不禁感叹，十里轻风不如你，七米暖阳不及卿。</p>
+            <div class="image-container">
+              <figure>
+                <img src="@/assets/7.1.png">
+              </figure>
+              <figure>
+                <img src="@/assets/7.2.png">
+              </figure>
+              <figure>
+                <img src="@/assets/7.3.png">
+              </figure>
+            </div>
+          </div>
+        </div>
+      </el-card>
+    </div>
+
+    <!-- 第八个卡片 -->
+    <div class="center-card8">
+      <el-card class="box-card8">
+        <div class="card-content">
+          <p class="title">冰雪童话，灵韵冬色</p>
+          <div class="body-content">
+            <p>骄阳流金，蝉鸣踏歌，萤火森森，这样的九寨总是让人仿佛置身在桃花源的仙境里，不禁感叹，十里轻风不如你，七米暖阳不及卿。</p>
+            <p>除长海、熊猫海冰冻60厘米外，其他的海子都不会完全结冰，冰块与冰花，有的像丝锦，有的像哈达，有的像流云，有的像青纱……</p>
+            <p>那撩人心魄的飞雪，纷纷扬扬、飘飘洒洒，如同春天的柳絮一般，不停地飞舞着，放肆地亲吻着山峦，亲吻着海子，亲吻着你的脸宠。如此洁白而高雅的世界，真的可以让你忘却世间无畏的纷争和烦恼。</p>
+            <div class="image-container">
+              <figure>
+                <img src="@/assets/8.1.png">
+              </figure>
+              <figure>
+                <img src="@/assets/8.2.png">
+              </figure>
+              <figure>
+                <img src="@/assets/8.3.png">
+              </figure>
+            </div>
+          </div>
+        </div>
+      </el-card>
+    </div>
+
   </div>
 </template>
 
@@ -168,7 +243,7 @@ export default {
   background-color: rgb(226, 252, 203); /* 右侧面板背景色 */
 }
 
-.center-card1, .center-card2, .center-card3, .center-card4, .center-card5, .center-card6, .center-card7 {
+.center-card1, .center-card2, .center-card3, .center-card4, .center-card5, .center-card6, .center-card7, .center-card8 {
   position: absolute; /* 使用绝对定位 */
   left: 50%; /* 固定的左侧位置 */
   transform: translateX(-50%); /* 使卡片水平居中 */
@@ -191,6 +266,15 @@ export default {
 }
 .center-card5 {
   top: 3170px;
+}
+.center-card6 {
+  top: 3880px;
+}
+.center-card7 {
+  top: 4600px;
+}
+.center-card8 {
+  top: 5270px;
 }
 
 .box-card1 {
@@ -220,6 +304,24 @@ export default {
 .box-card5 {
   width: 1100px; /* 卡片宽度 */
   height: 660px; /* 卡片高度 */
+  overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
+  padding: 20px; /* 增加卡片内边距 */
+}
+.box-card6 {
+  width: 1100px; /* 卡片宽度 */
+  height: 660px; /* 卡片高度 */
+  overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
+  padding: 20px; /* 增加卡片内边距 */
+}
+.box-card7 {
+  width: 1100px; /* 卡片宽度 */
+  height: 600px; /* 卡片高度 */
+  overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
+  padding: 20px; /* 增加卡片内边距 */
+}
+.box-card8 {
+  width: 1100px; /* 卡片宽度 */
+  height: 600px; /* 卡片高度 */
   overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
   padding: 20px; /* 增加卡片内边距 */
 }
