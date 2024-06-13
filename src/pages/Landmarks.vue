@@ -1,24 +1,17 @@
 <template>
-  <div>
-    <Navbar />
-    <el-container>
-      <el-header>
-        <h2>游客互动</h2>
-      </el-header>
-      <el-main>
-        <!-- 添加游客互动的内容 -->
-        <p>这里是游客互动的内容。</p>
-      </el-main>
-    </el-container>
-  </div>
+<div id="app"></div>
 </template>
 
-<script>
-import Navbar from '@/components/AppNavbar.vue';
+<style scoped>
+/* 组件内部的局部样式 */
 
-export default {
-  components: {
-    Navbar,
-  },
-};
-</script>
+/* 全局样式 */
+body, html, #app {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #3498db; /* 将背景颜色设置为蓝色 */
+}
+
+
+</style>

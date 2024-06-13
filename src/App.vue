@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
     <Navbar />
     <el-container>
       <el-main style="padding: 0;">
@@ -26,12 +26,12 @@ body, html, #app {
   height: 100%;
 }
 
-.el-container {
+/*.el-container {
   height: 100%;
 }
 
 .el-main {
-  padding-top: 60px; /* 确保主内容区域在导航栏下方 */
-  height: calc(100vh - 60px); /* 减去导航栏高度 */
-}
+  padding-top: 60px; !* 确保主内容区域在导航栏下方 *!
+  height: calc(100vh - 60px); !* 减去导航栏高度 *!
+}*/
 </style>
