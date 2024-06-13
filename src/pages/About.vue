@@ -62,19 +62,66 @@
     <div class="center-card3">
       <el-card class="box-card3">
         <div class="card-content">
-          <p class="title">童话世界</p>
+          <p class="title">价值意义</p>
           <div class="body-content">
-            <p>目前，九寨沟景区仅保留了树正寨、荷叶寨、则查洼寨这三个村寨，善良淳朴的他们，用微笑迎接着前来九寨沟的每一个人。而在这些村寨中，最壮观的莫过于树正寨前的“九宝莲花菩提塔”，七彩经幡随风飘荡，圣洁的白塔在阳光下仿若闪着光，这里也是众多游客到来时，都会双手合十，轻声祭拜的地方。</p>
-            <p>九寨沟是大自然鬼斧神工之杰作。这里四周雪峰高耸，湖水清澈艳丽，飞瀑多姿多彩，急流汹涌澎湃，林木青葱婆娑。蓝蓝的天空，明媚的阳光，清新的空气和点缀其间的古老村寨、栈桥、磨坊，组成了一幅内涵丰富、和谐统一的优美画卷，历来被当地藏族同胞视为“神山圣水”。九寨沟景区享誉中外，东方人称之为“人间仙境”，西方人则将之誉为“童话世界”。</p>
-            <!-- 图片部分 -->
+            <p>九寨沟国家自然保护区是岷山山系大熊猫A种群的核心地和走廊带，具有典型的自然生态系统，为全国生物多样性保护的核心之一。</p>
+            <p>动植物资源丰富，具有极高的生态保护、科学研究和美学旅游价值。景区内生物多样性丰富，物种珍稀性突出。九寨沟又是以高山湖泊群、瀑布、彩林、雪峰、蓝冰和藏族风情并称“九寨沟六绝”，被世人誉为“童话世界”，号称“水景之王”。九寨沟还是以地质遗迹钙化湖泊、滩流、瀑布景观、岩溶水系统和森林生态系统为主要保护对象的国家地质公园，具有极高的科研价值。</p>
             <div class="image-container">
               <figure>
-                <img src="@/assets/树正寨.png" alt="树正群海">
+                <img src="@/assets/五彩池.png" alt="五彩池">
+                <figcaption>五彩池</figcaption>
+              </figure>
+              <figure>
+                <img src="@/assets/高山裸鲤鱼.png" alt="高山裸鲤鱼">
+                <figcaption>高山裸鲤鱼</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </el-card>
+    </div>
+
+    <!-- 第四个卡片 -->
+    <div class="center-card4">
+      <el-card class="box-card4">
+        <div class="card-content">
+          <p class="title">童话世界</p>
+          <div class="body-content">
+            <p>动植物资源丰富，具有极高的生态保护、科学研究和美学旅游价值。景区内生物多样性丰富，物种珍稀性突出。九寨沟又是以高山湖泊群、瀑布、彩林、雪峰、蓝冰和藏族风情并称“九寨沟六绝”，被世人誉为“童话世界”，号称“水景之王”。九寨沟还是以地质遗迹钙化湖泊、滩流、瀑布景观、岩溶水系统和森林生态系统为主要保护对象的国家地质公园，具有极高的科研价值。</p>
+            <p>九寨沟是大自然鬼斧神工之杰作。这里四周雪峰高耸，湖水清澈艳丽，飞瀑多姿多彩，急流汹涌澎湃，林木青葱婆娑。蓝蓝的天空，明媚的阳光，清新的空气和点缀其间的古老村寨、栈桥、磨坊，组成了一幅内涵丰富、和谐统一的优美画卷，历来被当地藏族同胞视为“神山圣水”。九寨沟景区享誉中外，东方人称之为“人间仙境”，西方人则将之誉为“童话世界”。</p>
+            <div class="image-container">
+              <figure>
+                <img src="@/assets/树正寨.png" alt="树正寨">
                 <figcaption>树正寨</figcaption>
               </figure>
               <figure>
-                <img src="@/assets/桃花摇曳.png" alt="诺日朗瀑布">
+                <img src="@/assets/桃花摇曳.png" alt="桃花摇曳">
                 <figcaption>桃花摇曳</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </el-card>
+    </div>
+
+    <!-- 第五个卡片 -->
+    <div class="center-card5">
+      <el-card class="box-card5">
+        <div class="card-content">
+          <p class="title">春和景明，花开浪漫</p>
+          <div class="body-content">
+            <p>九寨沟是大自然鬼斧神工之杰作。这里四周雪峰高耸，湖水清澈艳丽，飞瀑多姿多彩，急流汹涌澎湃，林木青葱婆娑。蓝蓝的天空，明媚的阳光，清新的空气和点缀其间的古老村寨、栈桥、磨坊，组成了一幅内涵丰富、和谐统一的优美画卷，历来被当地藏族同胞视为“神山圣水”。九寨沟景区享誉中外，东方人称之为“人间仙境”，西方人则将之誉为“童话世界”。</p>
+            <p>嫩芽悄然出现，一抹抹新绿因重获生机而生长得日益茂盛，春风吹醒了封冻的海子，吹皱了一汪碧水，水色是幽静的蓝、清新的绿、浅浅的黄。无风的晴日，山林树色尽数倒映其中，呈现出对称之美。</p>
+            <p>春日，九寨沟呈现着季节更替的慌忙景象，山林还是一片残冬，长海尚未解冻，山脚下却早已是一幅初春画卷，野桃花开得如火如荼，在春阳下摇摆着一树花枝，将浓烈的春意诉说。天空湛蓝碧净，更衬得一树的花朵玲珑可爱，一簇簇拥挤在一起，争抢着呼吸春的气息。</p>
+            <div class="image-container">
+              <figure>
+                <img src="@/assets/5.1.png" alt="5.1">
+              </figure>
+              <figure>
+                <img src="@/assets/5.2.png" alt="5.2">
+              </figure>
+              <figure>
+                <img src="@/assets/5.3.png" alt="5.3">
               </figure>
             </div>
           </div>
@@ -107,7 +154,7 @@ export default {
 
 .left-pane, .right-pane {
   flex: 1; /* 左右面板各占一半 */
-  height: 2050px; /* 左右面板高度 */
+  height: 2850px; /* 左右面板高度 */
   display: flex; /* 允许子元素使用flex布局 */
   justify-content: center; /* 水平居中 */
   align-items: center; /* 垂直居中 */
@@ -121,7 +168,7 @@ export default {
   background-color: rgb(226, 252, 203); /* 右侧面板背景色 */
 }
 
-.center-card1, .center-card2, .center-card3 {
+.center-card1, .center-card2, .center-card3, .center-card4, .center-card5, .center-card6, .center-card7 {
   position: absolute; /* 使用绝对定位 */
   left: 50%; /* 固定的左侧位置 */
   transform: translateX(-50%); /* 使卡片水平居中 */
@@ -139,6 +186,12 @@ export default {
 .center-card3 {
   top: 1620px; /* 第三个卡片的位置 */
 }
+.center-card4 {
+  top: 2380px;
+}
+.center-card5 {
+  top: 3170px;
+}
 
 .box-card1 {
   width: 1100px; /* 卡片宽度 */
@@ -154,7 +207,19 @@ export default {
 }
 .box-card3 {
   width: 1100px; /* 卡片宽度 */
+  height: 710px; /* 卡片高度 */
+  overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
+  padding: 20px; /* 增加卡片内边距 */
+}
+.box-card4 {
+  width: 1100px; /* 卡片宽度 */
   height: 730px; /* 卡片高度 */
+  overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
+  padding: 20px; /* 增加卡片内边距 */
+}
+.box-card5 {
+  width: 1100px; /* 卡片宽度 */
+  height: 660px; /* 卡片高度 */
   overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
   padding: 20px; /* 增加卡片内边距 */
 }
