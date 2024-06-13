@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="center-card1">
-      <el-card class="box-card">
+      <el-card class="box-card1">
         <div class="card-content">
           <p class="title">九寨沟简介</p>
           <div class="body-content">
@@ -34,15 +34,25 @@
     </div>
     <!-- 新增的卡片 -->
     <div class="center-card2">
-      <el-card class="box-card">
+      <el-card class="box-card2">
         <div class="card-content">
-          <p class="title">九寨沟景点介绍</p>
+          <p class="title">九寨沟由来</p>
           <div class="body-content">
             <!-- 正文内容 -->
-            <p>九寨沟的景点丰富多样，包括珍珠滩瀑布、五花海、长海和诺日朗瀑布等。</p>
-            <p>珍珠滩瀑布是九寨沟的著名景点之一，其水流经过浅滩时溅起水花，犹如珍珠般闪亮。</p>
-            <p>五花海以其绚丽多彩的湖水著称，湖水在不同深度和光照下呈现出不同的色彩。</p>
-
+            <p>九寨沟的得名来自于景区内九个藏族寨子（树正寨、则查洼寨、黑角寨、荷叶寨、盘亚寨、亚拉寨、尖盘寨、热西寨、郭都寨），这九个寨子又称为“和药九寨”。由于有九个寨子的藏民世代居住于此，故名为“九寨沟”。</p>
+            <p>世界自然遗产组织的官员，在1992年第一次到九寨沟考察时，从沟口进去时，大家被大雨蒙住了视线。当他们一行来到火花海景点时，天空突然放睛，阳光穿过空中的雾霭，在天空中画出了一道美丽的彩虹，妖娆艳丽的火花海呈现在这些世界级官员的眼前，他们被眼前的美景惊呆了。随即，他们俯下身跪在海子边上，向这大自然的造化叩拜。事后他们回忆说，这里的景色太美了，让他们太吃惊了。他们不曾想象过，大自然竟有如此的鬼斧神工，将中国的九寨沟点画得如天仙般的美丽。</p>
+            <p>他们的叩拜，是对大自然的敬仰；他们的叩拜，是感谢中国，为世界留下了一块瑰宝，为人间留住了一片仙境。</p>
+            <!-- 图片部分 -->
+            <div class="image-container">
+              <figure>
+                <img src="@/assets/树正群海.png" alt="盆景滩">
+                <figcaption>树正群海</figcaption>
+              </figure>
+              <figure>
+                <img src="@/assets/诺日朗瀑布.png" alt="芦苇海">
+                <figcaption>诺日朗瀑布</figcaption>
+              </figure>
+            </div>
           </div>
         </div>
       </el-card>
@@ -98,12 +108,18 @@ export default {
 }
 
 .center-card2 {
-  top: 1000px; /* 固定的顶部位置 */
+  top: 800px; /* 固定的顶部位置 */
 }
 
-.box-card {
+.box-card1 {
   width: 1100px; /* 卡片宽度 */
   height: 700px; /* 卡片高度 */
+  overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
+  padding: 20px; /* 增加卡片内边距 */
+}
+.box-card2 {
+  width: 1100px; /* 卡片宽度 */
+  height: 760px; /* 卡片高度 */
   overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
   padding: 20px; /* 增加卡片内边距 */
 }
