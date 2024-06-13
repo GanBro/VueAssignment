@@ -3,10 +3,13 @@
     <div class="about-container">
       <div class="left-pane">
         <!-- 左侧内容 -->
-        <p>dsfasdf </p>
+        <p>dsfasdf</p>
       </div>
       <div class="right-pane">
         <!-- 右侧内容 -->
+        <el-card class="box-card">
+
+        </el-card>
       </div>
     </div>
   </div>
@@ -31,15 +34,21 @@ export default {
   flex: 1;
 }
 
-.left-pane {
+.left-pane, .right-pane {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 1;
-  background-color: rgb(126, 202, 186);
   height: 100%;
 }
 
-.right-pane {
-  flex: 1;
-  background-color: rgb(226, 252, 203);
-  height: 100%;
+.left-pane {
+  background-color: rgb(126, 202, 186);
 }
+
+.right-pane {
+  background-color: rgb(226, 252, 203);
+}
+
 </style>
+<!---->
