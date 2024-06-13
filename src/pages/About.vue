@@ -2,12 +2,10 @@
   <div class="about-page">
     <div class="about-container">
       <div class="left-pane">
-        <!-- 左侧内容 -->
-        <p>左侧内容</p>
+<!--        <p>左侧内容</p>-->
       </div>
       <div class="right-pane">
-        <!-- 右侧内容 -->
-        <p>右侧内容</p>
+<!--        <p>右侧内容</p>-->
       </div>
     </div>
     <div class="center-card1">
@@ -16,8 +14,35 @@
           <p class="title">九寨沟简介</p>
           <div class="body-content">
             <!-- 正文内容 -->
-            <p>九寨沟位于四川省阿坝藏族羌族自治州九寨沟县境内，以其多彩的湖泊、瀑布、雪山和原始森林而闻名。九寨沟因沟内有九个藏族村寨而得名。这里的自然景观独特，拥有翠海、叠瀑、彩林、雪峰、藏情、蓝冰六绝，被誉为“人间仙境”。</p>
-            <p>九寨沟是世界自然遗产，国家重点风景名胜区，国家AAAAA级旅游景区，被誉为“童话世界”。九寨沟的水、林、山、洞四位一体，互为映衬，构成了一幅幅美丽的图画。</p>
+            <p>九寨沟位于四川省西北部岷山山脉南段的阿坝藏族羌族自治州九寨沟县漳扎镇境内，地处岷山南段弓杠岭的东北侧。距离成都市400多千米，系长江水系嘉陵江上游白水江源头的一条大支沟。 九寨沟自然保护区地势南高北低，山谷深切，高差悬殊。北缘九寨沟口海拔仅2000米，中部峰岭均在4000米以上，南缘达4500米以上，主沟长30多公里。</p>
+            <p>九寨沟是世界自然遗产、国家重点风景名胜区、国家AAAAA级旅游景区、国家级自然保护区、国家地质公园、世界生物圈保护区网络，也是中国第一个以保护自然风景为主要目的的自然保护区。</p>
+
+            <!-- 图片部分 -->
+            <div class="image-container">
+              <figure>
+                <img src="@/assets/盆景滩.png" alt="盆景滩">
+                <figcaption>盆景滩</figcaption>
+              </figure>
+              <figure>
+                <img src="@/assets/芦苇海.png" alt="芦苇海">
+                <figcaption>芦苇海</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </el-card>
+    </div>
+    <!-- 新增的卡片 -->
+    <div class="center-card2">
+      <el-card class="box-card">
+        <div class="card-content">
+          <p class="title">九寨沟景点介绍</p>
+          <div class="body-content">
+            <!-- 正文内容 -->
+            <p>九寨沟的景点丰富多样，包括珍珠滩瀑布、五花海、长海和诺日朗瀑布等。</p>
+            <p>珍珠滩瀑布是九寨沟的著名景点之一，其水流经过浅滩时溅起水花，犹如珍珠般闪亮。</p>
+            <p>五花海以其绚丽多彩的湖水著称，湖水在不同深度和光照下呈现出不同的色彩。</p>
+
           </div>
         </div>
       </el-card>
@@ -61,12 +86,19 @@ export default {
   background-color: rgb(226, 252, 203); /* 右侧面板背景色 */
 }
 
-.center-card1 {
+.center-card1, .center-card2 {
   position: absolute; /* 使用绝对定位 */
-  top: 50%; /* 固定的顶部位置 */
   left: 50%; /* 固定的左侧位置 */
-  transform: translate(-50%, -50%); /* 使卡片在垂直和水平方向上居中 */
+  transform: translateX(-50%); /* 使卡片水平居中 */
   z-index: 10; /* 确保卡片在最上层 */
+}
+
+.center-card1 {
+  top: 50px; /* 固定的顶部位置 */
+}
+
+.center-card2 {
+  top: 1000px; /* 固定的顶部位置 */
 }
 
 .box-card {
@@ -95,9 +127,8 @@ export default {
   font-style: normal; /* 字体样式 */
   text-transform: none; /* 文本大小写转换 */
   text-decoration: none; /* 文本装饰 */
-  text-align: left; /* 文本对齐方式 */
+  text-align: center; /* 文本居中对齐 */
 }
-
 
 .body-content {
   text-align: left; /* 正文左对齐 */
@@ -112,7 +143,31 @@ export default {
 
 .body-content p {
   text-indent: 2em; /* 段落首行缩进两格 */
-  margin: 0 0 10px; /* 段落间距 */
+  margin: 0 0 15px; /* 段落间距 */
 }
 
+.image-container {
+  display: flex;
+  justify-content: space-between; /* 图片左右分布 */
+  margin: 20px 0; /* 图片与正文的间距 */
+}
+
+.image-container figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 48%; /* 图片宽度 */
+}
+
+.image-container img {
+  width: 100%; /* 图片宽度占满figure宽度 */
+  height: auto; /* 自动调整图片高度 */
+  border-radius: 8px; /* 图片圆角 */
+}
+
+.image-container figcaption {
+  margin-top: 10px; /* 图片与文字之间的间距 */
+  font-size: 16px;
+  color: #656a7b;
+}
 </style>
