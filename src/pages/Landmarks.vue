@@ -7,7 +7,7 @@
     </div>
 
     <div class="carousel">
-      <div class="arrow left-arrow" @click="prevSlide">‹</div>
+      <i class="fa fa-chevron-left carousel-arrow left-arrow" aria-hidden="true" @click="prevSlide"></i>
       <div class="carousel-container">
         <div v-for="(card, index) in visibleCards" :key="index" class="carousel-card">
           <figure class="image-figure">
@@ -20,7 +20,7 @@
           </div>
         </div>
       </div>
-      <div class="arrow right-arrow" @click="nextSlide">›</div>
+      <i class="fa fa-chevron-right carousel-arrow right-arrow" aria-hidden="true" @click="nextSlide"></i>
     </div>
   </div>
 </template>
@@ -123,7 +123,7 @@ export default {
   display: flex;
   align-items: center;
   position: relative;
-  width: 90%;
+  width: 85%;
 }
 
 .carousel-container {
@@ -166,18 +166,19 @@ export default {
   text-decoration: underline;
 }
 
-.arrow {
-  font-size: 2rem;
+.carousel-arrow {
+  font-size: 2rem; /* 调整图标大小 */
   cursor: pointer;
-  user-select: none;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  padding: 10px;
+  color: white; /* 箭头颜色 */
+  background-color: rgba(0, 0, 0, 0.5); /* 背景颜色 */
+  border-radius: 50%; /* 圆形背景 */
+  padding: 10px; /* 内边距 */
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
+  text-align: center; /* 确保图标居中 */
+  line-height: normal; /* 重置行高，避免图标位置不正确 */
 }
 
 .left-arrow {
@@ -185,6 +186,24 @@ export default {
 }
 
 .right-arrow {
+  right: 10px;
+}
+
+/* 使用Element Plus的箭头图标 */
+.el-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.el-icon-arrow-left {
+  left: 10px;
+}
+
+.el-icon-arrow-right {
   right: 10px;
 }
 </style>
