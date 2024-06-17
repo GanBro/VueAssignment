@@ -6,10 +6,11 @@
       </figure>
     </div>
 
+    <!-- 第一个轮播图 -->
     <div class="carousel">
-      <i class="fa fa-chevron-left carousel-arrow left-arrow" aria-hidden="true" @click="prevSlide"></i>
+      <i class="fa fa-chevron-left carousel-arrow left-arrow" aria-hidden="true" @click="prevSlide('first')"></i>
       <div class="carousel-container">
-        <div v-for="(card, index) in visibleCards" :key="index" class="carousel-card">
+        <div v-for="(card, index) in visibleCards1" :key="index" class="carousel-card">
           <figure class="image-figure">
             <img :src="card.image" :alt="card.title" class="image">
           </figure>
@@ -20,9 +21,63 @@
           </div>
         </div>
       </div>
-      <i class="fa fa-chevron-right carousel-arrow right-arrow" aria-hidden="true" @click="nextSlide"></i>
+      <i class="fa fa-chevron-right carousel-arrow right-arrow" aria-hidden="true" @click="nextSlide('first')"></i>
     </div>
+    <br>
+
+    <div class="image-container">
+      <figure class="image-figure">
+        <img src="@/assets/标志景点/则查洼沟景点.png" alt="则查洼沟景点" class="image">
+      </figure>
+    </div>
+
+    <!-- 第二个轮播图 -->
+    <div class="carousel">
+<!--      <i class="fa fa-chevron-left carousel-arrow left-arrow" aria-hidden="true" @click="prevSlide('second')"></i>-->
+      <div class="carousel-container">
+        <div v-for="(card, index) in visibleCards2" :key="index" class="carousel-card">
+          <figure class="image-figure">
+            <img :src="card.image" :alt="card.title" class="image">
+          </figure>
+          <div class="card-content">
+            <h2>{{ card.title }}</h2>
+            <p>{{ card.description }}</p>
+            <a href="#" class="details-link">详细</a>
+          </div>
+        </div>
+      </div>
+<!--      <i class="fa fa-chevron-right carousel-arrow right-arrow" aria-hidden="true" @click="nextSlide('second')"></i>-->
+    </div>
+    <br>
+
+    <div class="image-container">
+      <figure class="image-figure">
+        <img src="@/assets/标志景点/日则沟景点.png" alt="日则沟景点" class="image">
+      </figure>
+    </div>
+
+    <!-- 第三个轮播图 -->
+    <div class="carousel">
+      <i class="fa fa-chevron-left carousel-arrow left-arrow" aria-hidden="true" @click="prevSlide('third')"></i>
+      <div class="carousel-container">
+        <div v-for="(card, index) in visibleCards3" :key="index" class="carousel-card">
+          <figure class="image-figure">
+            <img :src="card.image" :alt="card.title" class="image">
+          </figure>
+          <div class="card-content">
+            <h2>{{ card.title }}</h2>
+            <p>{{ card.description }}</p>
+            <a href="#" class="details-link">详细</a>
+          </div>
+        </div>
+      </div>
+      <i class="fa fa-chevron-right carousel-arrow right-arrow" aria-hidden="true" @click="nextSlide('third')"></i>
+    </div>
+    <br>
+
   </div>
+
+
 </template>
 
 <script>
@@ -36,14 +91,30 @@ import 树正群海 from '@/assets/标志景点/树正群海.png';
 import 犀牛海 from '@/assets/标志景点/犀牛海.png';
 import 盆景滩 from '@/assets/标志景点/盆景滩.png';
 import 芦苇海 from '@/assets/标志景点/芦苇海.png';
-
-
+import 长海 from '@/assets/标志景点/长海.png';
+import 季节海 from '@/assets/标志景点/季节海.png';
+import 五彩池 from '@/assets/标志景点/五彩池.png';
+import 芳草海 from '@/assets/标志景点/芳草海.png';
+import 原始森林 from '@/assets/标志景点/原始森林.png';
+import 珍珠滩 from '@/assets/标志景点/珍珠滩.png';
+import 珍珠滩瀑布 from '@/assets/标志景点/珍珠滩瀑布.png';
+import 诺日朗瀑布 from '@/assets/标志景点/诺日朗瀑布.png';
+import 诺日朗群海 from '@/assets/标志景点/诺日朗群海.png';
+import 镜海 from '@/assets/标志景点/镜海.png';
+import 孔雀河道 from '@/assets/标志景点/孔雀河道.png';
+import 天鹅海 from '@/assets/标志景点/天鹅海.png';
+import 箭竹海 from '@/assets/标志景点/箭竹海.png';
+import 熊猫海 from '@/assets/标志景点/熊猫海.png';
+import 熊猫海瀑布 from '@/assets/标志景点/熊猫海瀑布.png';
+import 五花海 from '@/assets/标志景点/五花海.png';
 
 export default {
   data() {
     return {
-      currentSlide: 0,
-      cards: [
+      currentSlide1: 0,
+      currentSlide2: 0,
+      currentSlide3: 0,
+      cards1: [
         {
           title: "卧龙海",
           description: "海拔2220 米，长约253 米、宽2255 米、水深24 米，水底有条乳黄色的钙华堤埂，外形像沉卧在水中的巨龙。湖面平静时，透过清澈的湖水，卧龙似沉睡在水底；微风吹过湖面泛起涟漪，龙身仿佛在蠕动。风稍强时，湖面波浪起伏，卧龙像被惊醒，摇头摆尾；风强时，湖面瞬间破碎，卧龙刹时腾空而去，无影无踪。",
@@ -94,27 +165,133 @@ export default {
           description: "海拔2192 米，高约15 米、宽约10 米，位于芦苇海东侧对面石灰岩崖壁上，因岩石自然风化痕迹和植物装饰作用，形成一幅端庄秀丽的少女脸庞，传说是九寨沟的沃洛瑟嫫女神。",
           image: 芦苇海
         }
+      ],
+      cards2: [
+        {
+          title: "季节海",
+          description: "上季节海是九寨沟内独特的海子，海拔2910 米，长680 米、宽200米、深3 米，属冰川堰塞湖。湖水量会随季节变换，时盈时涸，因此而命名。一年中大部分时段干涸，仅雨季蓄水成湖，其余时段，湖水于涸、湖床上长满青草，郁郁葱葱。下季节海镶嵌于海拔2627 米的山坳里，季节性湖泊，因崩塌、泥石流堆积物阻塞河谷形成。在10 月秋季时，雨量充沛，湖水饱满，水色湛蓝。初夏季节，水位渐低，水色转为翠绿。",
+          image: 季节海
+        },
+        {
+          title: "五彩池",
+          description: "位于海拔3010 米地区，长约100 米，宽60 米，深6.6 米。是九寨沟最小而艳丽的海子，人称“九寨之眼”。湖水来自地下水补给，冬季湖面也不结冰。在阳光、藻类、钙华等多种因素作用下，湖水五彩斑斓。",
+          image: 五彩池
+        },
+        {
+          title: "长海",
+          description: "海拔3101 米，总长约4350 米，宽300 米，深90 米，库容4500万立方米。平面呈「S」型，属冰川堰塞湖、淡水湖，是九寨沟海拔最高、湖水最深，面积和库容最大的海子。无出水口，湖水除直接蒸发外，通过地下裂隙渗漏到五彩池、五花海等下游景点，成为核心景区的调节水库。夏秋雨季不溢堤，冬春旱季干涸，因此当地人称之为装不满，漏不干的「宝葫芦」。",
+          image: 长海
+        }
+      ],
+      cards3: [
+        {
+          title: "芳草海",
+          description: "海拔2905m。为沼泽化湖泊，长720m、宽50-100m、深2-6m，面积4.3万m2，有水容积20万m3。常有天鹅在此短暂停留。它与芳草海的下游相连，浅滩上绿草如茵，一道清流在绿茵中蜿蜒流过，滋着这一方水草。",
+          image: 芳草海
+        },
+        {
+          title: "原始森林",
+          description: "海拔2930m。植被以各种冷杉、云杉为主，树龄几百上千年，林下灌木有忍冬、杜鹃、箭竹、花楸等，苔藓深达数十厘米。负氧离子含量达3000个/cm3。在森林蓬松的绿地上长满了地衣，地衣是天然的环境检测员，只要空气中有一点点的有害物质，地衣就无法生存，地衣的出现，说明了九寨沟的空气质量非常纯净。",
+          image: 原始森林
+        },
+        {
+          title: "珍珠滩",
+          description: "海拔2450 米，滩面宽112.3 米、长189 米，平均坡度20 度，相对高差15 米，是九寨沟最宽阔的滩面，为碳酸钙沉积而成的大型钙华堆积台地。阳光下，湍流在凹凸不平的滩面上宣泄而下，溅起无数水珠，宛如粒粒洁白的珍珠，晶莹夺目，故得此名。",
+          image: 珍珠滩
+        },
+        {
+          title: "珍珠滩瀑布",
+          description: "海拔2433 米，均高21 米，瀑宽270 米。由第四纪冰川遗存的冰碛台地，再经钙化作用，使瀑布的坡坎更加高耸坚固，瀑面后凹呈新月型。瀑布跌落谷底，发出震耳欲聋的水声，气势磅礡。此处的负氧离子含量极为丰富，有「天然氧吧」之称。",
+          image: 珍珠滩瀑布
+        },
+        {
+          title: "诺日朗瀑布",
+          description: "海拔2343 米，高24.5 米、宽320 米，是中国最宽的高山钙华瀑布。滔滔流水自诺日朗群海而来，从瀑顶树丛中倾泻而下，像数条洁白的哈达，水势浩大，声震山谷。寒冬时节，瀑布成了一幅巨大的冰幔，无数的冰柱悬挂在陡崖之上，成为罕见的冰晶世界，造型各异的冰雕迎光透着幽幽的蓝色魅惑，是九寨沟六绝之一「蓝冰」。",
+          image: 诺日朗瀑布
+        },
+        {
+          title: "诺日朗群海",
+          description: "由大小20个钙华湖泊组成，发育钙华溶蚀现象。分布海拔2353m-2365m，总面积约0.03628 km2。其成因类似边石坝、彩池。诺日朗群海总体上紧密相间分布，连绵四百余米，其大小、形状、深度有所差异；最大的海子长185m，宽45m；最小的海子长仅20m，宽15m；海子水深多在7-20m之间，最深可达23m。",
+          image: 诺日朗群海
+        },
+        {
+          title: "镜海",
+          description: "海拔2367 米，长1155 米、宽241 米、深31 米，是九寨沟第三大湖泊，因水面平静如镜而得名。每当晨曦初现，蓝天白云、远山飞鸟都尽收海底，清晰可见，倒影胜实景。",
+          image: 镜海
+        },
+        {
+          title: "孔雀河道",
+          description: "孔雀河道是从五花海出水口深谷里的一条河道。漫步河道边，像是走在一副最浓烈的色彩创造出来的油画里，又犹如孔雀羽一样，将尘世间最美丽的蓝和绿都融合在一起。",
+          image: 孔雀河道
+        },
+        {
+          title: "天鹅海",
+          description: "海拔2905m。为沼泽化湖泊，长720m、宽50-100m、深2-6m，面积4.3万m2，有水容积20万m3。常有天鹅在此短暂停留。它与芳草海的下游相连，浅滩上绿草如茵，一道清流在绿茵中蜿蜒流过，滋着这一方水草。",
+          image: 天鹅海
+        },
+        {
+          title: "箭竹海",
+          description: "海拔2629m。长1184m、宽144-268m、深5-10m，面积15.1万m2，有水容积93万m3。地下有稳定的地下水补给，水位年变化小，冬季不结冰。湖畔箭竹吐翠，风平浪静时，湖水倒影迷人。",
+          image: 箭竹海
+        },
+        {
+          title: "熊猫海",
+          description: "海拔2574m。总长670m、宽109-237m、均深15.6m，面积10.8万m²，有水容积180万m³。为冰川堰塞湖，因熊猫在此活动而得名。水位呈季节性变化，变幅5-7m。丰水期，水满溢出形成高瀑布；枯水期，湖岸露出大片金黄色的钙华沙滩。湖水中群聚嬉戏的嘉陵裸裂尻鱼为一大奇观。",
+          image: 熊猫海
+        },
+        {
+          title: "熊猫海瀑布",
+          description: "海拔2574m。高65m、宽75m。又名高瀑布。瀑布呈三级跌水，是九寨沟落差最大的瀑布。丰水期上游来水大于渗漏量，湖泊水量充盈，翻堤形成瀑布；枯水季节，瀑布断流，瀑布下形成天然冰雕。",
+          image: 熊猫海瀑布
+        },
+        {
+          title: "五花海",
+          description: "海拔2462 米，长450 米、宽313 米、深9 米，属滑坡、泥石流阻塞原冰川沟谷形成的堰塞湖。五花海是九寨沟色彩最丰富的海子，湖底的钙华、藻类、水草、枯树在对光的不同反射和折射下，加上蓝天、白云、绿草、翠林在湖中的投影，构成了鹅黄、翠绿、墨绿、天蓝、深蓝、藏青等色调交织混染的湖水，似无数块宝石镶嵌成的巨形佩饰，珠光宝气，雍容华贵。俯瞰其全貌，俨然孔雀开屏。",
+          image: 五花海
+        }
+
       ]
     };
   },
   computed: {
-    visibleCards() {
-      const totalCards = this.cards.length;
-      const start = this.currentSlide;
-      const end = start + 3;
-      if (end <= totalCards) {
-        return this.cards.slice(start, end);
-      } else {
-        return [...this.cards.slice(start, totalCards), ...this.cards.slice(0, end - totalCards)];
-      }
+    visibleCards1() {
+      return this.getVisibleCards(this.currentSlide1, this.cards1);
+    },
+    visibleCards2() {
+      return this.getVisibleCards(this.currentSlide2, this.cards2);
+    },
+    visibleCards3() {
+      return this.getVisibleCards(this.currentSlide3, this.cards3);
     }
   },
   methods: {
-    nextSlide() {
-      this.currentSlide = (this.currentSlide + 1) % this.cards.length;
+    getVisibleCards(currentSlide, cards) {
+      const totalCards = cards.length;
+      const start = currentSlide;
+      const end = start + 3;
+      if (end <= totalCards) {
+        return cards.slice(start, end);
+      } else {
+        return [...cards.slice(start, totalCards), ...cards.slice(0, end - totalCards)];
+      }
     },
-    prevSlide() {
-      this.currentSlide = (this.currentSlide - 1 + this.cards.length) % this.cards.length;
+    nextSlide(carousel) {
+      if (carousel === 'first') {
+        this.currentSlide1 = (this.currentSlide1 + 1) % this.cards1.length;
+      } else if (carousel === 'second') {
+        this.currentSlide2 = (this.currentSlide2 + 1) % this.cards2.length;
+      } else if (carousel === 'third') {
+        this.currentSlide3 = (this.currentSlide3 + 1) % this.cards3.length;
+      }
+    },
+    prevSlide(carousel) {
+      if (carousel === 'first') {
+        this.currentSlide1 = (this.currentSlide1 - 1 + this.cards1.length) % this.cards1.length;
+      } else if (carousel === 'second') {
+        this.currentSlide2 = (this.currentSlide2 - 1 + this.cards2.length) % this.cards2.length;
+      } else if (carousel === 'third') {
+        this.currentSlide3 = (this.currentSlide3- 1 + this.cards3.length) % this.cards3.length;
+      }
     }
   }
 };
