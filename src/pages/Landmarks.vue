@@ -166,18 +166,21 @@ export default {
 }
 
 .carousel-card {
-  flex: 0 0 28%; /* 调整卡片宽度 */
+  flex: 0 0 28%;
   box-sizing: border-box;
-  padding: 10px; /* 减少卡片内边距 */
+  padding: 10px;
   background: white;
   border-radius: 10px;
-  margin: 0 5px; /* 减少卡片外边距 */
+  margin: 0 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center; /* 卡片内容居中 */
+  text-align: center;
+  display: flex; /* 添加这个 */
+  flex-direction: column; /* 添加这个 */
+  justify-content: space-between; /* 添加这个 */
 }
 
 .card-content {
-  padding: 10px; /* 调整卡片内容内边距 */
+  flex-grow: 1; /* 使内容占据剩余空间 */
 }
 
 .card-content h2 {
@@ -201,13 +204,11 @@ export default {
   text-indent: 0px;
 }
 
-
-
 .details-link {
   font-family: nexa;
   font-size: 14.4px;
   color: #7ecaba;
-  line-height: 36px; /* 确保行高一致 */
+  line-height: 36px;
   vertical-align: middle;
   letter-spacing: normal;
   word-spacing: 0px;
@@ -216,9 +217,7 @@ export default {
   font-variant: normal;
   text-transform: uppercase;
   text-decoration: none;
-  text-align: left; /* 确保文本左对齐 */
-  display: inline-block; /* 保持内联块级元素 */
-  margin-top: auto; /* 自动分配顶部边距以对齐底部 */
+  margin-top: auto; /* 将详情链接推到卡片底部 */
 }
 
 .card-content {
