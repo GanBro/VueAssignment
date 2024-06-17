@@ -185,14 +185,49 @@ export default {
 }
 
 .card-content p {
-  font-size: 12px; /* 调整文字大小 */
-  line-height: 1.4;
+  font-family: domine, sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
+  font-size: 16px;
+  color: #656a7b;
+  line-height: 24px;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  word-spacing: 0px;
+  font-weight: 200;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none;
+  text-align: left; /* 设置为有效的值，例如 left */
+  text-indent: 0px;
 }
 
+
+
 .details-link {
-  color: #3498db;
+  font-family: nexa;
+  font-size: 14.4px;
+  color: #7ecaba;
+  line-height: 36px; /* 确保行高一致 */
+  vertical-align: middle;
+  letter-spacing: normal;
+  word-spacing: 0px;
+  font-weight: 700;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
   text-decoration: none;
+  text-align: left; /* 确保文本左对齐 */
+  display: inline-block; /* 保持内联块级元素 */
+  margin-top: auto; /* 自动分配顶部边距以对齐底部 */
 }
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* 确保内容均匀分布 */
+  padding: 10px; /* 调整卡片内容内边距 */
+}
+
 
 .details-link:hover {
   text-decoration: underline;
