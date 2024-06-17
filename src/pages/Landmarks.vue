@@ -75,6 +75,31 @@
     </div>
     <br>
 
+    <div class="image-container">
+      <figure class="image-figure">
+        <img src="@/assets/标志景点/扎如沟景点.png" alt="扎如沟景点" class="image">
+      </figure>
+    </div>
+
+    <!-- 第四个轮播图 -->
+    <div class="carousel">
+      <i class="fa fa-chevron-left carousel-arrow left-arrow" aria-hidden="true" @click="prevSlide('fourth')"></i>
+      <div class="carousel-container">
+        <div v-for="(card, index) in visibleCards4" :key="index" class="carousel-card">
+          <figure class="image-figure">
+            <img :src="card.image" :alt="card.title" class="image">
+          </figure>
+          <div class="card-content">
+            <h2>{{ card.title }}</h2>
+            <p>{{ card.description }}</p>
+            <a href="#" class="details-link">详细</a>
+          </div>
+        </div>
+      </div>
+      <i class="fa fa-chevron-right carousel-arrow right-arrow" aria-hidden="true" @click="nextSlide('fourth')"></i>
+    </div>
+    <br>
+
   </div>
 
 
@@ -107,6 +132,10 @@ import 箭竹海 from '@/assets/标志景点/箭竹海.png';
 import 熊猫海 from '@/assets/标志景点/熊猫海.png';
 import 熊猫海瀑布 from '@/assets/标志景点/熊猫海瀑布.png';
 import 五花海 from '@/assets/标志景点/五花海.png';
+import 宝镜岩 from '@/assets/标志景点/宝镜岩.png';
+import 扎依扎嘎神山 from '@/assets/标志景点/扎依扎嘎神山.png';
+import 扎如寺 from '@/assets/标志景点/扎如寺.png';
+import 扎如沟黑海 from '@/assets/标志景点/扎如沟黑海.png';
 
 export default {
   data() {
@@ -114,6 +143,7 @@ export default {
       currentSlide1: 0,
       currentSlide2: 0,
       currentSlide3: 0,
+      currentSlide4: 0,
       cards1: [
         {
           title: "卧龙海",
@@ -250,6 +280,28 @@ export default {
           image: 五花海
         }
 
+      ],
+      cards4: [
+        {
+          title: "扎如寺",
+          description: "海拔2026 米，藏语称为“然悟贡巴”，始建于明朝末年，历经2 次的翻修，是九寨沟景区内唯一的宗教寺庙，也是苯教信仰者的圣地。苍山环绕，面临宝镜崖，金顶红檐，五色经幡祈祷于风中，展现出浓厚苯教文化氛围。这里每年会举行四次大型宗教活动，其中以农历四月十五日举办的「嘛智节」最为盛大。",
+          image: 扎如寺
+        },
+        {
+          title: "扎依扎嘎神山",
+          description: "扎依扎嘎神山海拔4528米，矗立在扎如马道的尽头，是当地居民的圣地。据说这座神山是万山之主。农历每月十五日的转山朝拜以及三月十五日麻芝节，都在这里举行。信徒们成群结队，有的骑马，有的步行，沿着逆时针的方向绕神山转动，祈求神佛赐福。",
+          image: 扎依扎嘎神山
+        },
+        {
+          title: "扎如沟黑海",
+          description: "黑湖（黑海）藏名措拉，面积约5亩，深8米，这是相当深、相当典型的一个冰斗湖遗迹。据资料所述，早年当地藏民天旱求雨会到这个湖，湖上常年飘有低云，在下面大声呼喊，上面的云就会落下雨滴。夏天的黑湖附近是一片草场，冬日雪景又是另外一番景观。",
+          image: 扎如沟黑海
+        },
+        {
+          title: "宝镜岩",
+          description: "因地壳表层的差异运动及地震后滑坡影响，岩体断裂抬升而成，最大高差500m。岩面大而平整，可观察出丰富地人和物的形象，因而似宝镜。",
+          image: 宝镜岩
+        },
       ]
     };
   },
@@ -262,6 +314,9 @@ export default {
     },
     visibleCards3() {
       return this.getVisibleCards(this.currentSlide3, this.cards3);
+    },
+    visibleCards4() {
+      return this.getVisibleCards(this.currentSlide4, this.cards4);
     }
   },
   methods: {
@@ -282,6 +337,9 @@ export default {
         this.currentSlide2 = (this.currentSlide2 + 1) % this.cards2.length;
       } else if (carousel === 'third') {
         this.currentSlide3 = (this.currentSlide3 + 1) % this.cards3.length;
+      } else if (carousel === 'fourth') {
+        console.log("yes")
+        this.currentSlide4 = (this.currentSlide4 + 1) % this.cards4.length;
       }
     },
     prevSlide(carousel) {
@@ -291,6 +349,8 @@ export default {
         this.currentSlide2 = (this.currentSlide2 - 1 + this.cards2.length) % this.cards2.length;
       } else if (carousel === 'third') {
         this.currentSlide3 = (this.currentSlide3- 1 + this.cards3.length) % this.cards3.length;
+      } else if (carousel === 'fourth') {
+        this.currentSlide4 = (this.currentSlide4- 1 + this.cards4.length) % this.cards4.length;
       }
     }
   }
