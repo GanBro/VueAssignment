@@ -112,24 +112,29 @@
     </div>
 
     <!-- 第五个卡片 -->
-    <div class="center-card5">
-      <el-card class="box-card5">
+    <div class="center-card4">
+      <el-card class="box-card4">
         <div class="card-content">
-          <p class="title">春和景明，花开浪漫</p>
           <div class="body-content">
-            <p>九寨沟是大自然鬼斧神工之杰作。这里四周雪峰高耸，湖水清澈艳丽，飞瀑多姿多彩，急流汹涌澎湃，林木青葱婆娑。蓝蓝的天空，明媚的阳光，清新的空气和点缀其间的古老村寨、栈桥、磨坊，组成了一幅内涵丰富、和谐统一的优美画卷，历来被当地藏族同胞视为“神山圣水”。九寨沟景区享誉中外，东方人称之为“人间仙境”，西方人则将之誉为“童话世界”。</p>
-            <p>嫩芽悄然出现，一抹抹新绿因重获生机而生长得日益茂盛，春风吹醒了封冻的海子，吹皱了一汪碧水，水色是幽静的蓝、清新的绿、浅浅的黄。无风的晴日，山林树色尽数倒映其中，呈现出对称之美。</p>
-            <p>春日，九寨沟呈现着季节更替的慌忙景象，山林还是一片残冬，长海尚未解冻，山脚下却早已是一幅初春画卷，野桃花开得如火如荼，在春阳下摇摆着一树花枝，将浓烈的春意诉说。天空湛蓝碧净，更衬得一树的花朵玲珑可爱，一簇簇拥挤在一起，争抢着呼吸春的气息。</p>
+            <!-- 图片部分 -->
             <div class="image-container">
               <figure>
-                <img src="@/assets/5.1.png" alt="5.1">
+                <img src="../assets/宗教民俗/玛尼堆.png" alt="玛尼堆">
+                <figcaption>玛尼堆</figcaption>
               </figure>
               <figure>
-                <img src="@/assets/5.2.png" alt="5.2">
+                <img src="@/assets/宗教民俗/佛塔.png" alt="佛塔">
+                <figcaption>佛塔</figcaption>
               </figure>
-              <figure>
-                <img src="@/assets/5.3.png" alt="5.3">
-              </figure>
+            </div>
+            <!-- 添加文字部分 -->
+            <div class="text-container">
+              <div class="text-left">
+                <p>在九寨沟景区里，常见堆积在十字路口、湖边和村寨的出入口处刻有经文的石头或神箭，堆上还插有经幡，这就是“玛尼堆”，九寨沟藏区称为“牙则”。</p>
+              </div>
+              <div class="text-right">
+                <p>藏传佛教中塔分为灵塔和佛塔两种。灵塔供奉在寺院里，用金或铜铸成，是活佛塔葬的一种形式。佛塔则建在寺院和各村寨人口较少的地方。塔的原色必须是白色。</p>
+              </div>
             </div>
           </div>
         </div>
@@ -272,7 +277,7 @@ export default {
   top: 1540px;
 }
 .center-card5 {
-  top: 2200px;
+  top: 2115px;
 }
 .center-card6 {
   top: 2500px;
