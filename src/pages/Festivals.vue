@@ -1,10 +1,5 @@
 <template>
   <div class="festivals-page">
-    <el-carousel class="carousel" indicator-position="outside">
-      <el-carousel-item v-for="item in 4" :key="item">
-        <h3>{{ item }}</h3>
-      </el-carousel-item>
-    </el-carousel>
     <div class="festivals-container">
       <div class="left-pane">
         <!-- 左侧内容 -->
@@ -12,6 +7,13 @@
       <div class="right-pane">
         <!-- 右侧内容 -->
       </div>
+    </div>
+    <div class="carousel-container">
+      <el-carousel class="carousel" indicator-position="outside">
+        <el-carousel-item v-for="item in 4" :key="item">
+          <h3>{{ item }}</h3>
+        </el-carousel-item>
+      </el-carousel>
     </div>
   </div>
 </template>
@@ -28,23 +30,33 @@
   height: 100vh; /* 页面高度占满整个视窗 */
 }
 
-.carousel {
+.carousel-container {
   position: absolute; /* 绝对定位 */
   top: 0; /* 距离顶部0 */
-  left: 10%; /* 距离左侧0 */
-  width: 80%; /* 走马灯宽度占满 */
+  left: 0; /* 距离左侧0 */
+  width: 100%; /* 宽度占满 */
   height: 300px; /* 走马灯高度 */
+  display: flex; /* 使用flex布局 */
+  justify-content: center; /* 水平居中 */
+  z-index: 2; /* 确保走马灯在上面 */
+}
+
+.carousel {
+  width: 80%; /* 走马灯宽度 */
+  height: 100%; /* 走马灯高度 */
 }
 
 .festivals-container {
   display: flex; /* 水平排列左侧和右侧面板 */
-  flex: 1; /* 使其占满剩余空间 */
-  margin-top: 300px; /* 留出走马灯的高度 */
+  width: 100%; /* 宽度占满 */
+  height: 1000px; /* 高度和走马灯一致 */
+  position: absolute; /* 绝对定位 */
+  top: 0; /* 距离顶部0 */
+  z-index: 1; /* 确保左右面板在走马灯下面 */
 }
 
 .left-pane, .right-pane {
   flex: 1; /* 左右面板各占一半 */
-  height: 4200px; /* 左右面板高度 */
   display: flex; /* 允许子元素使用flex布局 */
   justify-content: center; /* 水平居中 */
   align-items: center; /* 垂直居中 */
