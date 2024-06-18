@@ -23,27 +23,33 @@
     <div class="center-card2">
       <el-card class="box-card2">
         <div class="card-content">
-          <p class="title">九寨沟由来</p>
           <div class="body-content">
-            <!-- 正文内容 -->
-            <p>九寨沟的得名来自于景区内九个藏族寨子（树正寨、则查洼寨、黑角寨、荷叶寨、盘亚寨、亚拉寨、尖盘寨、热西寨、郭都寨），这九个寨子又称为“和药九寨”。由于有九个寨子的藏民世代居住于此，故名为“九寨沟”。</p>
-            <p>世界自然遗产组织的官员，在1992年第一次到九寨沟考察时，从沟口进去时，大家被大雨蒙住了视线。当他们一行来到火花海景点时，天空突然放睛，阳光穿过空中的雾霭，在天空中画出了一道美丽的彩虹，妖娆艳丽的火花海呈现在这些世界级官员的眼前，他们被眼前的美景惊呆了。随即，他们俯下身跪在海子边上，向这大自然的造化叩拜。事后他们回忆说，这里的景色太美了，让他们太吃惊了。他们不曾想象过，大自然竟有如此的鬼斧神工，将中国的九寨沟点画得如天仙般的美丽。</p>
-            <p>他们的叩拜，是对大自然的敬仰；他们的叩拜，是感谢中国，为世界留下了一块瑰宝，为人间留住了一片仙境。</p>
             <!-- 图片部分 -->
             <div class="image-container">
               <figure>
-                <img src="@/assets/树正群海.png" alt="树正群海">
-                <figcaption>树正群海</figcaption>
+                <img src="../assets/宗教民俗/嘛智文化节.png" alt="嘛智文化节">
+                <figcaption>嘛智文化节</figcaption>
               </figure>
               <figure>
-                <img src="@/assets/诺日朗瀑布.png" alt="诺日朗瀑布">
-                <figcaption>诺日朗瀑布</figcaption>
+                <img src="@/assets/宗教民俗/日桑文化节.png" alt="日桑文化节">
+                <figcaption>日桑文化节</figcaption>
               </figure>
+            </div>
+            <!-- 添加文字部分 -->
+            <div class="text-container">
+              <div class="text-left">
+                <p>“嘛智”是苯教三颯辞或三大真言中的一部分，通常称为“八字真言”。九寨沟扎如寺每年在农历四月初七至十六日举行嘛智文化节，游客们均可参与进来。</p>
+              </div>
+              <div class="text-right">
+                <p>日桑文化节又被称为祭“神山、神水”的节日。九寨沟在每年藏庆4月（阳历6月）都会举行一次，时间为期5天，游客们都可以参与进来。</p>
+              </div>
             </div>
           </div>
         </div>
       </el-card>
     </div>
+
+
 
     <!-- 第三个卡片 -->
     <div class="center-card3">
@@ -242,7 +248,7 @@ export default {
 }
 
 .center-card2 {
-  top: 500px; /* 固定的顶部位置 */
+  top: 400px; /* 固定的顶部位置 */
 }
 
 .center-card3 {
@@ -268,14 +274,14 @@ export default {
   border-radius: 15px;
   margin-top: 20px;
   width: 1100px; /* 卡片宽度 */
-  height: 250px; /* 卡片高度 */
+  height: 280px; /* 卡片高度 */
   overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
   padding: 20px; /* 增加卡片内边距 */
   background-color: rgb(21, 34, 72);
 }
 .box-card2 {
   width: 1100px; /* 卡片宽度 */
-  height: 770px; /* 卡片高度 */
+  height: 520px; /* 卡片高度 */
   overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
   padding: 20px; /* 增加卡片内边距 */
 }
@@ -356,7 +362,7 @@ export default {
 .image-container {
   display: flex;
   justify-content: space-between; /* 图片左右分布 */
-  margin: 20px 0; /* 图片与正文的间距 */
+  margin: -30px 0; /* 图片与正文的间距 */
 }
 
 .image-container figure {
@@ -377,4 +383,24 @@ export default {
   font-size: 16px;
   color: #656a7b;
 }
+.text-container {
+  display: flex;
+  justify-content: space-between; /* 使左右文本均匀分布 */
+  width: 100%;
+  padding: 20px; /* 增加文本内边距 */
+}
+
+.text-left, .text-right {
+  width: 48%; /* 左右文本各占宽度的一半 */
+  color: black;
+  font-size: 18px;
+}
+
+.text-left p, .text-right p {
+  text-indent: 2em; /* 段落首行缩进两格 */
+  margin: 0 0 15px; /* 段落间距 */
+}
+
+
+
 </style>
