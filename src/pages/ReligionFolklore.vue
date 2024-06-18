@@ -55,19 +55,26 @@
     <div class="center-card3">
       <el-card class="box-card3">
         <div class="card-content">
-          <p class="title">价值意义</p>
           <div class="body-content">
-            <p>九寨沟国家自然保护区是岷山山系大熊猫A种群的核心地和走廊带，具有典型的自然生态系统，为全国生物多样性保护的核心之一。</p>
-            <p>动植物资源丰富，具有极高的生态保护、科学研究和美学旅游价值。景区内生物多样性丰富，物种珍稀性突出。九寨沟又是以高山湖泊群、瀑布、彩林、雪峰、蓝冰和藏族风情并称“九寨沟六绝”，被世人誉为“童话世界”，号称“水景之王”。九寨沟还是以地质遗迹钙化湖泊、滩流、瀑布景观、岩溶水系统和森林生态系统为主要保护对象的国家地质公园，具有极高的科研价值。</p>
+            <!-- 图片部分 -->
             <div class="image-container">
               <figure>
-                <img src="@/assets/五彩池.png" alt="五彩池">
-                <figcaption>五彩池</figcaption>
+                <img src="../assets/宗教民俗/苯教.png" alt="苯教">
+                <figcaption>苯教</figcaption>
               </figure>
               <figure>
-                <img src="@/assets/高山裸鲤鱼.png" alt="高山裸鲤鱼">
-                <figcaption>高山裸鲤鱼</figcaption>
+                <img src="@/assets/宗教民俗/龙达.png" alt="龙达">
+                <figcaption>龙达</figcaption>
               </figure>
+            </div>
+            <!-- 添加文字部分 -->
+            <div class="text-container">
+              <div class="text-left">
+                <p>九寨沟的藏族同胞信仰苯教，公元前二世纪，西藏的苯教传到了九寨沟，与当时原始的巫教结合。直到今天，阿坝藏族羌族自治州仍然保存有60座苯教寺庙。</p>
+              </div>
+              <div class="text-right">
+                <p>龙达是原始苯教崇拜自然祭祀神灵的产物，也是藏传佛教祭祀各种神灵的主要内容之一。现今藏族社会信教者放“龙达”，主要是为了祈求神灵保佑自己吉祥如意。</p>
+              </div>
             </div>
           </div>
         </div>
@@ -252,7 +259,7 @@ export default {
 }
 
 .center-card3 {
-  top: 1620px; /* 第三个卡片的位置 */
+  top: 970px; /* 第三个卡片的位置 */
 }
 .center-card4 {
   top: 2380px;
@@ -287,37 +294,37 @@ export default {
 }
 .box-card3 {
   width: 1100px; /* 卡片宽度 */
-  height: 710px; /* 卡片高度 */
+  height: 520px; /* 卡片高度 */
   overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
   padding: 20px; /* 增加卡片内边距 */
 }
 .box-card4 {
   width: 1100px; /* 卡片宽度 */
-  height: 730px; /* 卡片高度 */
+  height: 520px; /* 卡片高度 */
   overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
   padding: 20px; /* 增加卡片内边距 */
 }
 .box-card5 {
   width: 1100px; /* 卡片宽度 */
-  height: 660px; /* 卡片高度 */
+  height: 520px; /* 卡片高度 */
   overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
   padding: 20px; /* 增加卡片内边距 */
 }
 .box-card6 {
   width: 1100px; /* 卡片宽度 */
-  height: 660px; /* 卡片高度 */
+  height: 520px; /* 卡片高度 */
   overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
   padding: 20px; /* 增加卡片内边距 */
 }
 .box-card7 {
   width: 1100px; /* 卡片宽度 */
-  height: 600px; /* 卡片高度 */
+  height: 520px; /* 卡片高度 */
   overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
   padding: 20px; /* 增加卡片内边距 */
 }
 .box-card8 {
   width: 1100px; /* 卡片宽度 */
-  height: 600px; /* 卡片高度 */
+  height: 520px; /* 卡片高度 */
   overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
   padding: 20px; /* 增加卡片内边距 */
 }
