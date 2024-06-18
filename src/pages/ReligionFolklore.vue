@@ -175,21 +175,26 @@
     <div class="center-card7">
       <el-card class="box-card7">
         <div class="card-content">
-          <p class="title">夏绿九寨，恣意清凉</p>
           <div class="body-content">
-            <p>缤纷的落叶在湖光流韵间漂浮，悠远的晴空碧净而湛蓝，秋天的九寨沟美得仿佛不真实，无时无刻不在演绎着赤、橙、黄、绿、青、蓝、紫的梦幻组合，古人说的“造化钟神秀”，也就不过如此吧。</p>
-            <p>森林树脂的清新，海子浓淡相宜的妆容，银帘般的瀑布抒发四季中最为恣意的激情，凉爽的夏风吹拂着经幡。此时此刻，天是蓝的，树是绿的，海子是斑斓不可言说的，心情是自由的……</p>
-            <p>骄阳流金，蝉鸣踏歌，萤火森森，这样的九寨总是让人仿佛置身在桃花源的仙境里，不禁感叹，十里轻风不如你，七米暖阳不及卿。</p>
+            <!-- 图片部分 -->
             <div class="image-container">
               <figure>
-                <img src="@/assets/7.1.png">
+                <img src="../assets/宗教民俗/春节联欢会.png" alt="春节联欢会">
+                <figcaption>春节联欢会</figcaption>
               </figure>
               <figure>
-                <img src="@/assets/7.2.png">
+                <img src="@/assets/宗教民俗/跳锅庄.png" alt="跳锅庄">
+                <figcaption>跳锅庄</figcaption>
               </figure>
-              <figure>
-                <img src="@/assets/7.3.png">
-              </figure>
+            </div>
+            <!-- 添加文字部分 -->
+            <div class="text-container">
+              <div class="text-left">
+                <p>请山神活动结束后，全寨最热闹的场面开始了，他们围成一个圈，通宵达旦欢歌笑语。在这种文化氛围中，凝聚一代又一代的九寨沟人勤劳勇敢、团结互爱的精神。</p>
+              </div>
+              <div class="text-right">
+                <p>锅庄舞，又称为“果卓”、“歌庄”、“卓”等，藏语意为圆圈歌舞，是藏族三大民间舞蹈之一。其包含丰富的藏族文化内涵，地域特色鲜明，有较高的艺术和社会价值。</p>
+              </div>
             </div>
           </div>
         </div>
@@ -200,26 +205,30 @@
     <div class="center-card8">
       <el-card class="box-card8">
         <div class="card-content">
-          <p class="title">冰雪童话，灵韵冬色</p>
           <div class="body-content">
-            <p>骄阳流金，蝉鸣踏歌，萤火森森，这样的九寨总是让人仿佛置身在桃花源的仙境里，不禁感叹，十里轻风不如你，七米暖阳不及卿。</p>
-            <p>除长海、熊猫海冰冻60厘米外，其他的海子都不会完全结冰，冰块与冰花，有的像丝锦，有的像哈达，有的像流云，有的像青纱……</p>
-            <p>那撩人心魄的飞雪，纷纷扬扬、飘飘洒洒，如同春天的柳絮一般，不停地飞舞着，放肆地亲吻着山峦，亲吻着海子，亲吻着你的脸宠。如此洁白而高雅的世界，真的可以让你忘却世间无畏的纷争和烦恼。</p>
+            <!-- 图片部分 -->
             <div class="image-container">
               <figure>
-                <img src="@/assets/8.1.png">
+                <img src="../assets/宗教民俗/桑烟.png" alt="桑烟">
+                <figcaption>桑烟</figcaption>
               </figure>
               <figure>
-                <img src="@/assets/8.2.png">
+                <img src="@/assets/宗教民俗/背水习惯.png" alt="背水习惯">
+                <figcaption>背水习惯</figcaption>
               </figure>
-              <figure>
-                <img src="@/assets/8.3.png">
-              </figure>
+            </div>
+            <!-- 添加文字部分 -->
+            <div class="text-container">
+              <div class="text-left">
+                <p>“桑”是藏语的译音，本义为“净”。桑烟又称熏香。桑烟的发源地在今西藏阿里地区，沿袭至今已有3000余年的历史，是宗教活动中的重要仪式之一。</p>
+              </div>
+              <div class="text-right">
+                <p>九寨沟在每一年的新年和日桑文化节期间都会有背水习俗，游客们均可参与。九寨沟藏族同胞要到海子背水，第一声鸡叫后背回新年最早圣水，供全家人团圆饮用。</p>
+              </div>
             </div>
           </div>
         </div>
       </el-card>
-      <br><br>
     </div>
   </div>
 </template>
@@ -246,7 +255,7 @@ export default {
 
 .left-pane, .right-pane {
   flex: 1; /* 左右面板各占一半 */
-  height: 2850px; /* 左右面板高度 */
+  height: 4500px; /* 左右面板高度 */
   display: flex; /* 允许子元素使用flex布局 */
   justify-content: center; /* 水平居中 */
   align-items: center; /* 垂直居中 */
@@ -288,10 +297,10 @@ export default {
   top: 2680px;
 }
 .center-card7 {
-  top: 3200px;
+  top: 3250px;
 }
 .center-card8 {
-  top: 3500px;
+  top: 3830px;
 }
 
 .box-card1 {
