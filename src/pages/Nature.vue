@@ -14,6 +14,22 @@
             </p>
           </div>
         </el-card>
+        <!-- 大卡片，包含三个小卡片 -->
+        <div class="large-card">
+          <i class="fa fa-chevron-left carousel-arrow left-arrow" aria-hidden="true" @click="prevSlide"></i>
+          <div class="carousel-container">
+            <div v-for="(card, index) in visibleCards" :key="index" class="small-card">
+              <el-card>
+                <img :src="card.image" :alt="card.title" class="image">
+                <div class="card-description">
+                  <h3>{{ card.title }}</h3>
+                  <p>{{ card.description }}</p>
+                </div>
+              </el-card>
+            </div>
+          </div>
+          <i class="fa fa-chevron-right carousel-arrow right-arrow" aria-hidden="true" @click="nextSlide"></i>
+        </div>
       </div>
       <div class="bottom-section" :style="{ height: bottomHeight + 'px' }">
         <!-- 底部内容 -->
@@ -35,8 +51,40 @@ export default {
       cardTop: 80, // 卡片顶部位置默认值
       cardLeft: 250, // 卡片左侧位置默认值
       cardMarginTop: 50, // 卡片上边距默认值
+      currentSlide: 0,
+      cards: [
+        { title: "三尖杉", description: "三尖杉", image: "src/assets/自然与动物/三尖杉.png" },
+        { title: "冬虫夏草", description: "冬虫夏草", image: "src/assets/自然与动物/冬虫夏草.png" },
+        { title: "冷杉", description: "冷杉", image: "src/assets/自然与动物/冷杉.png" },
+        { title: "四川红杉", description: "四川红杉", image: "src/assets/自然与动物/四川红杉.png" },
+        { title: "白皮云杉", description: "白皮云杉", image: "src/assets/自然与动物/白皮云杉.png" },
+        { title: "红松", description: "红松", image: "src/assets/自然与动物/红松.png" },
+        { title: "连香树", description: "连香树", image: "src/assets/自然与动物/连香树.png" },
+        { title: "领春木", description: "领春木", image: "src/assets/自然与动物/领春木.png" },
+        { title: "黄栌", description: "黄栌", image: "src/assets/自然与动物/黄栌.png" },
+      ]
     };
   },
+  computed: {
+    visibleCards() {
+      const totalCards = this.cards.length;
+      const start = this.currentSlide;
+      const end = start + 3;
+      if (end <= totalCards) {
+        return this.cards.slice(start, end);
+      } else {
+        return [...this.cards.slice(start, totalCards), ...this.cards.slice(0, end - totalCards)];
+      }
+    }
+  },
+  methods: {
+    nextSlide() {
+      this.currentSlide = (this.currentSlide + 1) % this.cards.length;
+    },
+    prevSlide() {
+      this.currentSlide = (this.currentSlide - 1 + this.cards.length) % this.cards.length;
+    }
+  }
 };
 </script>
 
@@ -48,13 +96,6 @@ export default {
   flex-direction: column;
   min-height: 100vh;
   overflow-y: auto; /* 使容器可以垂直滚动 */
-}
-
-.controls {
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  background-color: #f0f0f0;
 }
 
 .sections {
@@ -104,5 +145,75 @@ export default {
   font-weight: 400;
   color: rgba(255, 255, 255, 0.8);
   text-indent: 2em; /* 首行缩进 */
+}
+
+.large-card {
+  width: 1000px;
+  height: 500px;
+  position: absolute; /* 绝对定位 */
+  top: 600px; /* 调整大卡片的顶部位置 */
+  left: 250px; /* 调整大卡片的左侧位置 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white; /* 修改背景颜色为白色 */
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  justify-content: center;
+}
+
+.small-card {
+  flex: 0 0 28%;
+  box-sizing: border-box;
+  padding: 10px;
+  background: white;
+  border-radius: 10px;
+  margin: 0 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.image {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+.carousel-arrow {
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  text-align: center;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.card-description h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2em;
+}
+
+.card-description p {
+  font-size: 1em;
 }
 </style>
