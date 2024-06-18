@@ -85,19 +85,26 @@
     <div class="center-card4">
       <el-card class="box-card4">
         <div class="card-content">
-          <p class="title">童话世界</p>
           <div class="body-content">
-            <p>动植物资源丰富，具有极高的生态保护、科学研究和美学旅游价值。景区内生物多样性丰富，物种珍稀性突出。九寨沟又是以高山湖泊群、瀑布、彩林、雪峰、蓝冰和藏族风情并称“九寨沟六绝”，被世人誉为“童话世界”，号称“水景之王”。九寨沟还是以地质遗迹钙化湖泊、滩流、瀑布景观、岩溶水系统和森林生态系统为主要保护对象的国家地质公园，具有极高的科研价值。</p>
-            <p>九寨沟是大自然鬼斧神工之杰作。这里四周雪峰高耸，湖水清澈艳丽，飞瀑多姿多彩，急流汹涌澎湃，林木青葱婆娑。蓝蓝的天空，明媚的阳光，清新的空气和点缀其间的古老村寨、栈桥、磨坊，组成了一幅内涵丰富、和谐统一的优美画卷，历来被当地藏族同胞视为“神山圣水”。九寨沟景区享誉中外，东方人称之为“人间仙境”，西方人则将之誉为“童话世界”。</p>
+            <!-- 图片部分 -->
             <div class="image-container">
               <figure>
-                <img src="@/assets/树正寨.png" alt="树正寨">
-                <figcaption>树正寨</figcaption>
+                <img src="../assets/宗教民俗/藏历新年.png" alt="藏历新年">
+                <figcaption>藏历新年</figcaption>
               </figure>
               <figure>
-                <img src="@/assets/桃花摇曳.png" alt="桃花摇曳">
-                <figcaption>桃花摇曳</figcaption>
+                <img src="@/assets/宗教民俗/民俗风情月.png" alt="民俗风情月">
+                <figcaption>民俗风情月</figcaption>
               </figure>
+            </div>
+            <!-- 添加文字部分 -->
+            <div class="text-container">
+              <div class="text-left">
+                <p>现在的藏历起源于公元 1027 年，从此，藏历的第一天固定为藏历年。藏历新年是藏族最盛大、最为隆重的传统节日，是藏族人民一年一度的新春佳节。</p>
+              </div>
+              <div class="text-right">
+                <p>九寨沟民俗风情月在每年的3、4月举行，游客均可参加。期间可观瞻则查洼古藏寨建筑文化，藏文化学者带您感受古朴安多文化，畅游九寨历史长河。</p>
+              </div>
             </div>
           </div>
         </div>
@@ -262,19 +269,19 @@ export default {
   top: 970px; /* 第三个卡片的位置 */
 }
 .center-card4 {
-  top: 2380px;
+  top: 1540px;
 }
 .center-card5 {
-  top: 3170px;
+  top: 2200px;
 }
 .center-card6 {
-  top: 3880px;
+  top: 2500px;
 }
 .center-card7 {
-  top: 4600px;
+  top: 2700px;
 }
 .center-card8 {
-  top: 5270px;
+  top: 3000px;
 }
 
 .box-card1 {
