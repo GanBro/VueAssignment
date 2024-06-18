@@ -16,6 +16,7 @@
         </el-card>
         <!-- 大卡片，包含三个小卡片 -->
         <div class="large-card">
+          <div class="header">植物资源</div>
           <i class="fa fa-chevron-left carousel-arrow left-arrow" aria-hidden="true" @click="prevSlide"></i>
           <div class="carousel-container">
             <div v-for="(card, index) in visibleCards" :key="index" class="small-card">
@@ -154,11 +155,29 @@ export default {
   top: 600px; /* 调整大卡片的顶部位置 */
   left: 250px; /* 调整大卡片的左侧位置 */
   display: flex;
+  flex-direction: column; /* 垂直排列 */
   align-items: center;
   justify-content: center;
   background-color: white; /* 修改背景颜色为白色 */
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  font-family: 'Quando', sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
+  font-size: 36px;
+  color: rgb(21, 34, 72);
+  line-height: 54px;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  word-spacing: 0px;
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none;
+  text-indent: 0px;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 
@@ -170,9 +189,8 @@ export default {
 }
 
 .small-card {
-  flex: 0 0 28%;
+  flex: 0 0 30%; /* 调整小卡片的长度 */
   box-sizing: border-box;
-  padding: 10px;
   background: white;
   border-radius: 10px;
   margin: 0 5px;
@@ -181,9 +199,13 @@ export default {
 }
 
 .image {
-  max-width: 100%;
-  max-height: 80vh;
-  object-fit: contain;
+  display: block;
+  width: 100%; /* 确保图片宽度填满容器 */
+  height: auto; /* 保持图片纵横比 */
+  object-fit: cover; /* 图片覆盖整个容器区域 */
+  margin: 0; /* 去除默认外边距 */
+  padding: 0; /* 去除默认内边距 */
+  border: none; /* 移除默认边框 */
 }
 
 .carousel-arrow {
@@ -216,4 +238,5 @@ export default {
 .card-description p {
   font-size: 1em;
 }
+
 </style>
