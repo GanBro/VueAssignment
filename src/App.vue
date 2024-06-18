@@ -27,11 +27,4 @@ body, html, #app {
   height: 100%;
 }
 
-/*.el-container {
-  height: 100%;
-}
-
-.el-main {
-  padding-top: 60px; !* 确保主内容区域在导航栏下方 *!
-}*/
 </style>
