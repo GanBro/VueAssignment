@@ -219,7 +219,7 @@ export default {
   display: flex; /* 允许子元素使用flex布局 */
   flex-direction: column; /* 使内容垂直排列 */
   height: 100vh; /* 页面高度占满整个视窗 */
-  margin-top: 60px; /* 确保内容不会被导航栏覆盖 */
+  //margin-top: 60px; /* 确保内容不会被导航栏覆盖 */
 }
 
 .about-container {

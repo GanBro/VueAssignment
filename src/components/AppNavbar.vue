@@ -8,7 +8,7 @@
         <el-menu-item index="/about" @click="navigate('/about')">关于九寨</el-menu-item>
         <el-menu-item index="/landmarks" @click="navigate('/landmarks')">标志景点</el-menu-item>
         <el-menu-item index="/nature" @click="navigate('/nature')">自然与动物</el-menu-item>
-        <el-menu-item index="/research" @click="navigate('/research')">科研与保护</el-menu-item>
+        <el-menu-item index="/religionFolklore" @click="navigate('/religionFolklore')">宗教民俗</el-menu-item>
         <el-menu-item index="/culture" @click="navigate('/culture')">历史与文化</el-menu-item>
         <el-menu-item index="/festivals" @click="navigate('/festivals')">传统节庆</el-menu-item>
       </el-menu>
