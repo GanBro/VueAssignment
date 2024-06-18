@@ -180,23 +180,25 @@ export default {
 }
 
 .carousel-container {
+  height: calc(100% - 100px); /* 假设头部和其他元素占用了100px，这里需要调整 */
   display: flex;
-  overflow: hidden;
+  overflow-x: auto; /* 如果需要水平滚动，可以添加这个 */
   width: 100%;
   justify-content: center;
 }
 .small-card {
-  flex: 0 0 30%; /* 调整小卡片的长度 */
+  flex: 0 0 calc(33.33% - 10px); /* 调整小卡片的宽度，并减去间隔 */
+  height: 100%; /* 填满容器高度 */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: stretch; /* 使内容占满整个卡片 */
+  //align-items: stretch; /* 使内容占满整个卡片 */
   box-sizing: border-box;
+  padding: 10px; /*不加这个卡片高度不一样*/
   background: white;
   border-radius: 10px;
   margin: 0 5px;
   backdrop-filter: blur(10px);
-  height: 100%; /* 使卡片填满可用高度 */
 }
 
 .image {
