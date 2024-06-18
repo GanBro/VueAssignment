@@ -1,3 +1,4 @@
+<!--AppNavbar.vue-->
 <template>
   <nav class="navbar">
     <div class="navbar-container">
