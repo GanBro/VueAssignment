@@ -112,8 +112,8 @@
     </div>
 
     <!-- 第五个卡片 -->
-    <div class="center-card4">
-      <el-card class="box-card4">
+    <div class="center-card5">
+      <el-card class="box-card5">
         <div class="card-content">
           <div class="body-content">
             <!-- 图片部分 -->
@@ -145,21 +145,26 @@
     <div class="center-card6">
       <el-card class="box-card6">
         <div class="card-content">
-          <p class="title">彩林漫漫，炫雅妩媚</p>
           <div class="body-content">
-            <p>春日，九寨沟呈现着季节更替的慌忙景象，山林还是一片残冬，长海尚未解冻，山脚下却早已是一幅初春画卷，野桃花开得如火如荼，在春阳下摇摆着一树花枝，将浓烈的春意诉说。天空湛蓝碧净，更衬得一树的花朵玲珑可爱，一簇簇拥挤在一起，争抢着呼吸春的气息。</p>
-            <p>五彩斑斓的世界深沉且厚重，彩色的湖水、彩色的天空、彩色的世界，她似一个少女，藏着五彩斑斓的心事；她秀美婉约，灵动优雅，秋阳点染着静谧的山谷，树树含着秋韵，山山堆着落晖。</p>
-            <p>缤纷的落叶在湖光流韵间漂浮，悠远的晴空碧净而湛蓝，秋天的九寨沟美得仿佛不真实，无时无刻不在演绎着赤、橙、黄、绿、青、蓝、紫的梦幻组合，古人说的“造化钟神秀”，也就不过如此吧。</p>
+            <!-- 图片部分 -->
             <div class="image-container">
               <figure>
-                <img src="@/assets/6.1.png">
+                <img src="../assets/宗教民俗/转经.png" alt="转经">
+                <figcaption>转经</figcaption>
               </figure>
               <figure>
-                <img src="@/assets/6.2.png">
+                <img src="@/assets/宗教民俗/请山神.png" alt="请山神">
+                <figcaption>请山神</figcaption>
               </figure>
-              <figure>
-                <img src="@/assets/6.3.png">
-              </figure>
+            </div>
+            <!-- 添加文字部分 -->
+            <div class="text-container">
+              <div class="text-left">
+                <p>在九寨沟，你还可以看到无处不在的转经筒。转经筒有大有小，小的为手持转经筒，供信徒们在任何场所不停地摇转，大的固定在寺院的转经道上。</p>
+              </div>
+              <div class="text-right">
+                <p>正月十五，为了预知新年的未来，几乎每个寨子都要十分隆重地搞一次请山神的活动。请山神的两位姑娘，是由法师根据当年天文历法推算的生辰八字来确定的。</p>
+              </div>
             </div>
           </div>
         </div>
@@ -277,16 +282,16 @@ export default {
   top: 1540px;
 }
 .center-card5 {
-  top: 2115px;
+  top: 2111px;
 }
 .center-card6 {
-  top: 2500px;
+  top: 2680px;
 }
 .center-card7 {
-  top: 2700px;
+  top: 3200px;
 }
 .center-card8 {
-  top: 3000px;
+  top: 3500px;
 }
 
 .box-card1 {
