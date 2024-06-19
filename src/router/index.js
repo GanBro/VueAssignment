@@ -4,7 +4,7 @@ import About from '../pages/About.vue';
 import Landmarks from '../pages/Landmarks.vue';
 import Nature from '../pages/Nature.vue';
 import ReligionFolklore from '../pages/ReligionFolklore.vue';
-import Culture from '../pages/Culture.vue';
+import Culture from '../pages/Tickets.vue';
 import Festivals from '../pages/Festivals.vue';
 
 const routes = [
