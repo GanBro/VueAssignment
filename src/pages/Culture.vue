@@ -6,6 +6,16 @@
       <div class="card-header">
         九寨文艺
       </div>
+      <el-row class="card-body">
+        <el-col :span="12" class="card-left">
+          <!-- 左侧内容 -->
+          <p>左侧内容示例</p>
+        </el-col>
+        <el-col :span="12" class="card-right">
+          <!-- 右侧内容 -->
+          <p>右侧内容示例</p>
+        </el-col>
+      </el-row>
     </el-card>
   </el-row>
 </template>
@@ -60,5 +70,25 @@ export default {
   text-decoration: none solid rgb(101, 106, 123);
   text-align: center; /* 添加文本居中对齐 */
   margin: 50px; /* 清除默认的边距 */
+}
+
+.card-body {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.card-left {
+  background-color: #f5f5f5;
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto; /* 允许垂直滚动 */
+}
+
+.card-right {
+  background-color: #ffffff;
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto; /* 允许垂直滚动 */
 }
 </style>
