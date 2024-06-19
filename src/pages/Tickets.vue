@@ -7,7 +7,7 @@
         </div>
       </el-card>
 
-      <el-card class="custom-card detailed-card" shadow="hover" style="height: 700px; top: 300px;">
+      <el-card class="custom-card detailed-card" shadow="hover" style="height: 550px; top: 300px;">
         <div class="card-header">
           景区门票价格
         </div>
@@ -15,10 +15,13 @@
           <el-col :span="6" v-for="(card, index) in cards" :key="index">
             <el-card shadow="hover" class="small-card">
               <div class="small-card-header">{{ card.title }}</div>
-              <div class="small-card-price">¥{{ card.price }} <span class="small-card-unit">/人</span></div>
+              <div class="small-card-price">
+                <span class="price">{{ card.price }}</span>
+                <span class="unit">/人</span>
+              </div>
               <ul class="small-card-details">
-                <li>执行日期：{{ card.startDate }}</li>
-                <li>截止日期：{{ card.endDate }}</li>
+                <li class="card-detail">{{ card.startDate }}</li>
+                <li class="card-detail">{{ card.endDate }}</li>
               </ul>
               <el-button type="primary" class="small-card-button">点击购买</el-button>
             </el-card>
@@ -38,27 +41,27 @@ export default {
       cards: [
         {
           title: '旺季门票',
-          price: 190,
-          startDate: '4月1日起',
-          endDate: '11月15日止'
+          price: '¥190',
+          startDate: '执行日期：4月1日起',
+          endDate: '截止日期：11月15日止'
         },
         {
           title: '旺季观光车票',
-          price: 90,
-          startDate: '4月1日起',
-          endDate: '11月15日止'
+          price: '¥90',
+          startDate: '执行日期：4月1日起',
+          endDate: '截止日期：11月15日止'
         },
         {
           title: '淡季门票',
-          price: 80,
-          startDate: '11月16日起',
-          endDate: '次年3月31日止'
+          price: '¥80',
+          startDate: '执行日期：11月16日起',
+          endDate: '截止日期：次年3月31日止'
         },
         {
           title: '淡季观光车票',
-          price: 80,
-          startDate: '11月16日起',
-          endDate: '次年3月31日止'
+          price: '¥80',
+          startDate: '执行日期：11月16日起',
+          endDate: '截止日期：次年3月31日止'
         }
       ]
     };
@@ -82,8 +85,8 @@ export default {
 
 .custom-card {
   position: absolute; /* 绝对定位 */
-  left: 15%; /* 距离左侧 15%，可以根据需要调整 */
-  width: 70%; /* 卡片宽度 */
+  left: 13.5%;
+  width: 75%;
   background-color: white; /* 卡片背景颜色 */
   border-radius: 10px; /* 卡片圆角 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 卡片阴影 */
@@ -110,7 +113,7 @@ export default {
 
 .detailed-card .card-header {
   font-family: 'quando', sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
-  font-size: 36px;
+  font-size: 50px;
   color: rgb(0, 0, 0);
   line-height: 54px;
   font-weight: 400;
@@ -118,7 +121,7 @@ export default {
   font-variant: normal;
   text-transform: none;
   text-decoration: none;
-  margin-bottom: 20px;
+  margin: 30px auto 50px auto;
 }
 
 .cards-container {
@@ -130,41 +133,96 @@ export default {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  padding: 20px;
-  height: 300px; /* 设置卡片高度 */
+  width: 250px;
+  height: 350px; /* 设置卡片高度 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .small-card-header {
-  font-size: 18px;
-  font-weight: bold;
+  font-family: 'nexa', sans-serif;
+  font-size: 25.4px;
+  color: rgb(86, 99, 136);
+  line-height: 1.2;
+  font-weight: 700;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  text-decoration: none;
   margin-bottom: 10px;
 }
 
 .small-card-price {
-  font-size: 24px;
-  color: rgb(0, 0, 102);
-  margin: 10px 0;
+  font-family: 'domine', sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
+  font-size: 65.6px;
+  color: rgb(86, 99, 136);
+  line-height: 98.4px;
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none;
+  display: flex; /* 使用 flex 布局 */
+  flex-direction: column; /* 垂直排列 */
+  align-items: center; /* 居中 */
+}
+
+.small-card-price .price {
+  margin-bottom: -50px; /* 价格和单位之间的距离 */
+}
+
+.small-card-price .unit {
+  font-size: 22.4px; /* 确保单位字体大小合适 */
 }
 
 .small-card-unit {
-  font-size: 16px;
-  vertical-align: super;
+  font-family: 'nexa', sans-serif;
+  font-size: 22.4px;
+  color: rgb(86, 99, 136);
+  line-height: 11.2px; /* 根据你的描述可能这个值太小，适当调整 */
+  font-weight: 700;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none;
+  display: block; /* 强制换行 */
 }
 
 .small-card-details {
-  font-size: 14px;
   list-style: none;
   padding: 0;
-  margin: 10px 0;
+  margin: -10px 0;
 }
 
 .small-card-details li {
+  font-family: 'nexa', sans-serif;
+  font-size: 14.4px;
+  color: rgb(86, 99, 136);
+  line-height: 21.6px;
+  font-weight: 700;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none;
   margin-bottom: 5px;
 }
 
 .small-card-button {
-  background-color: rgb(255, 117, 41);
-  color: white;
-  margin-top: 10px;
+  background-color: rgb(86, 99, 136);
+  color: rgb(255, 136, 60);
+  margin-top: 30px;
+  height: 40px;
 }
+
+.small-card-button:hover {
+  background-color: rgb(255, 255, 255); /* 背景变为白色 */
+  color: rgb(0, 0, 0); /* 字体变为黑色 */
+}
+
+
+.card-detail {
+  color: rgb(86, 99, 136);
+}
+
 </style>
