@@ -18,7 +18,6 @@ const routes = [
   { path: '/site/:id', component: Festivals },  // 动态路由，假设是详情页面
 ];
 
-
 const router = createRouter({
   history: createWebHistory(),
   routes,

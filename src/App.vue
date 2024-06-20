@@ -1,4 +1,3 @@
-<!--App.vue-->
 <template>
   <div id="app">
     <Navbar />
@@ -26,5 +25,4 @@ body, html, #app {
   padding: 0;
   height: 100%;
 }
-
 </style>
