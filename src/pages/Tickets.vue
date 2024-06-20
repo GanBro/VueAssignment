@@ -29,14 +29,14 @@
         </el-row>
       </el-card>
 
-      <el-card class="custom-card custom-card1" shadow="hover" style="height: 500px; top: 910px;">
+      <el-card class="custom-card custom-card1" shadow="hover" style="height: 350px; top: 910px;">
         <div class="card-content1">
           票务公告
         </div>
         <div class="card-body">
           <p class="announcement-text">九寨沟景区灾后恢复重建已全面完成，景区于9月28日恢复全域开放。结合《旅游景区恢复开放疫情防控措施指南（2021年3月修订版）》的相关规定，从即日起，旅游接待人数由原来的每日30000人次调整至每日41000人次。游客朋友请提前做好出行规划，关注阿坝旅游网（www.abatour.com）了解假日期间景区门票预约和旅游接待等信息，并提前一天在该网站进行实名制预约购票，景区现场不设购票窗口，未预约购买门票将无法入园游览，请勿盲目前往。</p>
           <p class="announcement-text">疫情防控期间，请备好有效身份证件和健康码，按照疫情防控有关规定主动出示相关证件。游客全程必须佩戴口罩，服从景区检测点进行体温检测。对未持身份证件和未按规定戴口罩的游客，景区将按照疫情防控期间相关规定，拒绝办理入园手续。</p>
-          <p class="announcement-link">点击进入公告</p>
+          <router-link to="/announcement" class="announcement-link">点击进入公告</router-link>
         </div>
       </el-card>
     </el-row>
@@ -269,7 +269,7 @@ export default {
 
 .announcement-link {
   font-family: 'quando', sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
-  font-size: 17.92px;
+  font-size: 15.92px;
   color: rgb(255, 72, 0);
   background-color: rgba(0, 0, 0, 0);
   line-height: 26.88px;
@@ -281,5 +281,6 @@ export default {
   text-indent: 0; /* 无首行缩进 */
   margin-top: 70px; /* 增加与上方内容的距离 */
   text-align: left; /* 左对齐 */
+  cursor: pointer;
 }
 </style>
