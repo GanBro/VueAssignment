@@ -22,7 +22,7 @@ export default {
     return {
       activeIndex: this.$route.path,
       isScrolled: false,
-      navbarBackgroundColor: 'rgb(25, 37, 75)', // 初始背景颜色
+      navbarBackgroundColor: '',
       menuItems: [
         { index: '/', label: '首页', color: '#0000' },
         { index: '/about', label: '关于九寨', color: 'rgb(26, 39, 76)' },
@@ -66,19 +66,21 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400&display=swap');
+
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
-  transition: background-color 0.3s, color 0.3s; /* 添加颜色过渡效果 */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 确保没有阴影 */
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-logo {
-  width: 150px; /* 设置宽度 */
-  height: 44px; /* 设置高度 */
+  width: 150px;
+  height: 44px;
   margin-right: 10px;
   margin-left: 10px;
 }
@@ -87,23 +89,56 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px; /* 添加一些内边距 */
+  padding: 10px 20px;
   width: 100%;
 }
 
 .el-menu-demo {
   background-color: transparent;
   flex: 1;
-  border-bottom: none !important; /* 确保没有边框 */
-  box-shadow: none !important; /* 确保没有阴影 */
+  border-bottom: none !important;
+  box-shadow: none !important;
 }
 
-.el-menu-item {
-  transition: background-color 0.3s, color 0.3s; /* 添加过渡效果 */
+.el-menu-demo >>> .el-menu-item {
+  font-family: 'Muli', sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
+  font-size: 18px;
+  color: #ffffff !important; /* 确保字体颜色为白色 */
+  background-color: rgba(0, 0, 0, 0);
+  line-height: 18px;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  word-spacing: 0px;
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none solid rgb(255, 255, 255);
+  text-align: left;
+  text-indent: 0px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.el-menu-demo >>> .el-menu-item.is-active {
+  background-color: rgba(0, 0, 0, 0) !important;
+  color: #ffffff !important; /* 确保字体颜色为白色 */
 }
 
 .el-menu-demo >>> .el-menu-item:hover {
-  background-color: #000 !important; /* 设置悬停背景颜色 */
-  color: coral !important; /* 设置悬停字体颜色 */
+  font-family: 'Muli', sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
+  font-size: 18px;
+  color: #666666 !important;
+  background-color: #ffffff !important;
+  line-height: 18px;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  word-spacing: 0px;
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none solid rgb(102, 102, 102);
+  text-align: left;
+  text-indent: 0px;
 }
 </style>
