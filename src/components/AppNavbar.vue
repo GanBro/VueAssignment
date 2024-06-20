@@ -98,15 +98,4 @@ export default {
   box-shadow: none !important; /* 确保没有阴影 */
 }
 
-.el-menu-item {
-  color: #fff; /* 初始字体颜色 */
-  transition: color 0.3s ease, background-color 0.3s ease; /* 添加颜色过渡效果 */
-  letter-spacing: 5px;
-  font-family: 'Arial', sans-serif;
-  background-color: transparent; /* 初始背景颜色 */
-}
-
-.el-menu-item:hover {
-  color: #00a65a;
-}
 </style>
