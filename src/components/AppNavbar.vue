@@ -24,7 +24,7 @@ export default {
       isScrolled: false,
       navbarBackgroundColor: 'rgb(25, 37, 75)', // 初始背景颜色
       menuItems: [
-        { index: '/', label: '首页', color: 'rgb(25, 37, 75)' },
+        { index: '/', label: '首页', color: '#0000' },
         { index: '/about', label: '关于九寨', color: 'rgb(26, 39, 76)' },
         { index: '/landmarks', label: '标志景点', color: 'rgb(26, 39, 76)' },
         { index: '/nature', label: '自然与动物', color: '#3357FF' },
@@ -50,7 +50,7 @@ export default {
       this.navbarBackgroundColor = activeItem.color;
     }
   },
-  beforeDestroy() {
+  beforeUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
@@ -98,4 +98,12 @@ export default {
   box-shadow: none !important; /* 确保没有阴影 */
 }
 
+.el-menu-item {
+  transition: background-color 0.3s, color 0.3s; /* 添加过渡效果 */
+}
+
+.el-menu-demo >>> .el-menu-item:hover {
+  background-color: #000 !important; /* 设置悬停背景颜色 */
+  color: coral !important; /* 设置悬停字体颜色 */
+}
 </style>
