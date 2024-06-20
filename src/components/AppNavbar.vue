@@ -1,15 +1,16 @@
 <template>
-  <nav :class="['navbar', { 'scrolled': isScrolled }]">
+  <nav :class="['navbar', { 'scrolled': isScrolled }]" :style="{ backgroundColor: navbarBackgroundColor }">
     <div class="navbar-container">
       <img src="@/assets/logo/九寨沟logo.png" alt="九寨沟Logo" class="navbar-logo">
       <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
-        <el-menu-item index="/" @click="navigate('/')">首页</el-menu-item>
-        <el-menu-item index="/about" @click="navigate('/about')">关于九寨</el-menu-item>
-        <el-menu-item index="/landmarks" @click="navigate('/landmarks')">标志景点</el-menu-item>
-        <el-menu-item index="/nature" @click="navigate('/nature')">自然与动物</el-menu-item>
-        <el-menu-item index="/religionFolklore" @click="navigate('/religionFolklore')">宗教民俗</el-menu-item>
-        <el-menu-item index="/festivals" @click="navigate('/festivals')">传统节庆</el-menu-item>
-        <el-menu-item index="/culture" @click="navigate('/culture')">票务信息</el-menu-item>
+        <el-menu-item
+            v-for="item in menuItems"
+            :key="item.index"
+            :index="item.index"
+            @click="navigate(item.index, item.color)"
+        >
+          {{ item.label }}
+        </el-menu-item>
       </el-menu>
     </div>
   </nav>
@@ -21,22 +22,41 @@ export default {
     return {
       activeIndex: this.$route.path,
       isScrolled: false,
+      navbarBackgroundColor: 'rgb(25, 37, 75)', // 初始背景颜色
+      menuItems: [
+        { index: '/', label: '首页', color: 'rgb(25, 37, 75)' },
+        { index: '/about', label: '关于九寨', color: 'rgb(26, 39, 76)' },
+        { index: '/landmarks', label: '标志景点', color: 'rgb(26, 39, 76)' },
+        { index: '/nature', label: '自然与动物', color: '#3357FF' },
+        { index: '/religionFolklore', label: '宗教民俗', color: '#FF33A5' },
+        { index: '/festivals', label: '传统节庆', color: '#A533FF' },
+        { index: '/culture', label: '票务信息', color: '#33FFA5' },
+      ],
     };
   },
   watch: {
     $route(to) {
       this.activeIndex = to.path;
+      const activeItem = this.menuItems.find(item => item.index === to.path);
+      if (activeItem) {
+        this.navbarBackgroundColor = activeItem.color;
+      }
     }
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
+    const activeItem = this.menuItems.find(item => item.index === this.$route.path);
+    if (activeItem) {
+      this.navbarBackgroundColor = activeItem.color;
+    }
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
-    navigate(path) {
+    navigate(path, color) {
       this.$router.push(path);
+      this.navbarBackgroundColor = color;
     },
     handleScroll() {
       this.isScrolled = window.scrollY > 0;
@@ -52,15 +72,8 @@ export default {
   left: 0;
   width: 100%;
   z-index: 999;
-  background-color: rgb(25, 37, 75); /* 初始背景颜色 */
   transition: background-color 0.3s, color 0.3s; /* 添加颜色过渡效果 */
-  /* 注释掉或移除 box-shadow */
-  border-bottom: none; /* 确保没有边框 */
-  box-shadow: none; /* 确保没有阴影 */
-}
-
-.navbar.scrolled {
-  background-color: #ffffff; /* 滚动后的背景颜色 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 确保没有阴影 */
 }
 
 .navbar-logo {
@@ -76,32 +89,24 @@ export default {
   align-items: center;
   padding: 10px 20px; /* 添加一些内边距 */
   width: 100%;
-  border-bottom: none; /* 确保没有边框 */
 }
 
 .el-menu-demo {
   background-color: transparent;
   flex: 1;
-  border-bottom: none; /* 确保没有边框 */
+  border-bottom: none !important; /* 确保没有边框 */
+  box-shadow: none !important; /* 确保没有阴影 */
 }
 
 .el-menu-item {
   color: #fff; /* 初始字体颜色 */
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease; /* 添加颜色过渡效果 */
   letter-spacing: 5px;
   font-family: 'Arial', sans-serif;
-}
-
-.navbar.scrolled .el-menu-item {
-  color: #333; /* 滚动后的字体颜色 */
+  background-color: transparent; /* 初始背景颜色 */
 }
 
 .el-menu-item:hover {
   color: #00a65a;
-}
-
-.el-menu {
-  border-bottom: none !important; /* 强制移除边框 */
-  box-shadow: none !important; /* 强制移除阴影 */
 }
 </style>
