@@ -39,6 +39,13 @@
           <router-link to="/announcement" class="announcement-link">点击进入公告</router-link>
         </div>
       </el-card>
+
+      <!-- 底栏 -->
+      <el-footer class="footer">
+        <div class="footer-content">
+          &copy; 2024 九寨沟景区 | 版权所有
+        </div>
+      </el-footer>
     </el-row>
   </el-row>
 </template>
@@ -82,7 +89,7 @@ export default {
 <style scoped>
 .container {
   width: 100%;
-  height: 1300px; /* 增加高度以适应多个卡片 */
+  height: 1500px; /* 增加高度以适应底栏 */
   position: relative;
 }
 
@@ -253,8 +260,7 @@ export default {
 }
 
 .announcement-text {
-  font-family: 'quando',
-  sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
+  font-family: 'quando', sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
   font-size: 17.92px;
   color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0);
@@ -282,5 +288,22 @@ export default {
   margin-top: 70px; /* 增加与上方内容的距离 */
   text-align: left; /* 左对齐 */
   cursor: pointer;
+}
+
+/* 底栏样式 */
+.footer {
+  background-color: rgb(86, 99, 136);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 20px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  font-family: 'quando', sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
+  font-size: 16px;
+  line-height: 24px;
 }
 </style>
