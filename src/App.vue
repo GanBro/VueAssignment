@@ -1,11 +1,7 @@
 <template>
   <div id="app">
     <Navbar />
-    <el-container>
-      <el-main style="padding: 0;">
-        <router-view></router-view>
-      </el-main>
-    </el-container>
+    <router-view></router-view>
   </div>
 </template>
 
