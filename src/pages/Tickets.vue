@@ -29,7 +29,7 @@
         </el-row>
       </el-card>
 
-      <el-card class="custom-card custom-card1" shadow="hover" style="height: 350px; top: 910px;">
+      <el-card class="custom-card custom-card1" shadow="hover" style="height: 320px; top: 910px;">
         <div class="card-content1">
           票务公告
         </div>
@@ -82,7 +82,7 @@ export default {
 <style scoped>
 .container {
   width: 100%;
-  height: 5000px; /* 增加高度以适应多个卡片 */
+  height: 1300px; /* 增加高度以适应多个卡片 */
   position: relative;
 }
 
