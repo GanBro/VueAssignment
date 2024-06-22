@@ -2,7 +2,7 @@
 <template>
   <el-row class="container">
     <el-row class="background">
-      <el-card class="custom-card" shadow="hover" style="height: 150px; top: 80px;">
+      <el-card class="custom-card" shadow="hover" style="height: 150px; top: 100px;">
         <div class="card-content">
           票务信息
         </div>
@@ -58,7 +58,6 @@
           <font-awesome-icon icon="fa-brands fa-facebook" class="icon" />
           <font-awesome-icon icon="fa-brands fa-twitter" class="icon" />
         </div>
-        <p class="back-to-top">^ 顶部</p>
       </el-footer>
     </el-row>
   </el-row>
@@ -99,37 +98,51 @@ export default {
   }
 };
 </script>
-
 <style scoped>
 .container {
   width: 100%;
-  height: 1700px; /* 增加高度以适应底栏 */
+  height: 1600px; /* 调整页面高度以适应底栏和其他内容 */
   position: relative;
 }
 
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  height: 300px; /* 根据实际需要调整高度 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
 .background {
   background-color: rgb(255, 116, 40);
-  width: 100%; /* 设置宽度 */
-  height: 100%; /* 设置高度 */
+  width: 100%; /* Set width */
+  height: 100%; /* Set height */
   position: absolute;
 }
 
 .custom-card {
-  position: absolute; /* 绝对定位 */
+  position: absolute; /* Absolute positioning */
   left: 13.5%;
   width: 75%;
-  background-color: white; /* 卡片背景颜色 */
-  border-radius: 10px; /* 卡片圆角 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 卡片阴影 */
-  display: flex; /* 使用 Flexbox 居中内容 */
-  flex-direction: column; /* 垂直排列 */
-  justify-content: flex-start; /* 从上方开始排列 */
-  align-items: center; /* 垂直居中 */
-  padding: 20px; /* 内边距 */
+  background-color: white; /* Card background color */
+  border-radius: 10px; /* Card border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
+  display: flex; /* Flexbox for centering content */
+  flex-direction: column; /* Vertical layout */
+  justify-content: flex-start; /* Start from top */
+  align-items: center; /* Vertical centering */
+  padding: 20px; /* Padding */
 }
 
 .custom-card1 {
-  align-items: flex-start; /* 左对齐 */
+  align-items: flex-start; /* Left-aligned */
 }
 
 .card-content {
@@ -143,6 +156,22 @@ export default {
   font-variant: normal;
   text-transform: none;
   text-decoration: none;
+}
+
+.detailed-card {
+  position: absolute; /* Absolute positioning */
+  top: 100px; /* Adjusted top position */
+  left: 13.5%; /* Same left position as other cards */
+  width: 75%; /* Same width as other cards */
+  height: 550px; /* Fixed height as per requirement */
+  background-color: white; /* Card background color */
+  border-radius: 10px; /* Card border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
+  display: flex; /* Flexbox for centering content */
+  flex-direction: column; /* Vertical layout */
+  justify-content: flex-start; /* Start from top */
+  align-items: center; /* Vertical centering */
+  padding: 20px; /* Padding */
 }
 
 .detailed-card .card-header {
@@ -168,7 +197,7 @@ export default {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   width: 250px;
-  height: 350px; /* 设置卡片高度 */
+  height: 350px; /* Card height */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -197,119 +226,98 @@ export default {
   font-variant: normal;
   text-transform: none;
   text-decoration: none;
+  display: flex; /* Flex layout */
+  flex-direction: column; /* Vertical layout */
+  align-items: center; /* Center align */
 }
 
-.price {
-  font-size: 50px;
+.small-card-price .price {
+  margin-bottom: -50px; /* Spacing between price and unit */
 }
 
-.unit {
-  font-size: 30px;
+.small-card-price .unit {
+  font-size: 22.4px; /* Adjust unit font size */
 }
 
 .small-card-details {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
-  margin: 0;
+  margin: -10px 0;
 }
 
-.card-detail {
-  font-family: 'quando', sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
-  font-size: 22.4px;
+.small-card-details li {
+  font-family: 'nexa', sans-serif;
+  font-size: 14.4px;
   color: rgb(86, 99, 136);
-  line-height: 33.6px;
-  font-weight: 400;
+  line-height: 21.6px;
+  font-weight: 700;
   font-style: normal;
   font-variant: normal;
   text-transform: none;
   text-decoration: none;
-  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .small-card-button {
-  background-color: rgb(255, 116, 40);
-  font-size: 20px;
-  width: 80%;
-  margin: 0 auto 10px auto;
+  background-color: rgb(86, 99, 136);
+  color: rgb(255, 136, 60);
+  margin-top: 30px;
+  height: 40px;
 }
 
-/* 公告卡片样式 */
+.small-card-button:hover {
+  background-color: rgb(255, 255, 255); /* White background on hover */
+  color: rgb(0, 0, 0); /* Black text on hover */
+}
+
 .card-content1 {
-  font-family: 'quando', sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
-  font-size: 40px;
-  color: rgb(255, 117, 41);
-  line-height: 68.08px;
-  text-align: center;
-  font-weight: 400;
-  font-style: normal;
-  font-variant: normal;
-  text-transform: none;
-  text-decoration: none;
-}
-
-.card-body {
   font-family: 'quando', sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
   font-size: 24px;
   color: rgb(0, 0, 0);
-  line-height: 54px;
+  background-color: rgba(0, 0, 0, 0);
+  line-height: 36px;
   font-weight: 400;
   font-style: normal;
   font-variant: normal;
   text-transform: none;
   text-decoration: none;
-  margin-top: 20px;
+  text-align: left; /* Left align */
+  text-indent: 0px;
+}
+
+.card-body {
+  padding: 20px;
 }
 
 .announcement-text {
-  margin-bottom: 10px;
+  font-family: 'quando',
+  sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
+  font-size: 17.92px;
+  color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  line-height: 26.88px;
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none;
+  text-indent: 2em; /* First line indentation */
 }
 
 .announcement-link {
-  color: rgb(255, 116, 40);
+  font-family: 'quando', sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
+  font-size: 15.92px;
+  color: rgb(255, 72, 0);
+  background-color: rgba(0, 0, 0, 0);
+  line-height: 26.88px;
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
   text-decoration: none;
-}
-
-.announcement-link:hover {
-  text-decoration: underline;
-}
-
-/* 底栏样式 */
-.footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  width: 100%;
-  bottom: 0;
-  position: absolute; /* 固定在页面底部 */
-  left: 0;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.footer-icons img {
-  margin: 0 10px;
-}
-
-.footer-icons .icon {
-  margin: 0 10px;
-  color: #fff;
-  font-size: 24px;
-}
-
-.footer-content p {
-  margin: 5px 0;
-}
-
-.back-to-top {
-  margin-top: 10px;
+  text-indent: 0; /* No indentation */
+  margin-top: 70px; /* Top margin */
+  text-align: left; /* Left align */
   cursor: pointer;
-}
-
-.back-to-top:hover {
-  text-decoration: underline;
 }
 </style>
