@@ -2,7 +2,7 @@
 <template>
   <el-row class="container">
     <el-row class="background">
-      <el-card class="custom-card" shadow="hover" style="height: 150px; top: 80px;">
+      <el-card class="custom-card" shadow="hover" style="height: 150px; top: 100px;">
         <div class="card-content">
           票务信息
         </div>
@@ -135,6 +135,7 @@ export default {
 .card-content {
   font-family: 'quando', sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
   font-size: 59.2px;
+  margin-top: 20px;
   color: rgb(255, 117, 41);
   line-height: 68.08px;
   text-align: center;
@@ -236,6 +237,20 @@ export default {
 /* 公告卡片样式 */
 .card-content1 {
   font-family: 'quando', sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  line-height: 36px;
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none;
+  text-align: left; /* 对齐方式改为左对齐 */
+  text-indent: 0px;
+}
+/*.card-content1 {
+  font-family: 'quando', sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
   font-size: 40px;
   color: rgb(255, 117, 41);
   line-height: 68.08px;
@@ -245,23 +260,25 @@ export default {
   font-variant: normal;
   text-transform: none;
   text-decoration: none;
-}
+}*/
 
 .card-body {
-  font-family: 'quando', sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
-  font-size: 24px;
+  padding: 20px;
+}
+
+.announcement-text {
+  font-family: 'quando',
+  sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
+  font-size: 17.92px;
   color: rgb(0, 0, 0);
-  line-height: 54px;
+  background-color: rgba(0, 0, 0, 0);
+  line-height: 26.88px;
   font-weight: 400;
   font-style: normal;
   font-variant: normal;
   text-transform: none;
   text-decoration: none;
-  margin-top: 20px;
-}
-
-.announcement-text {
-  margin-bottom: 10px;
+  text-indent: 2em; /* 首行缩进 */
 }
 
 .announcement-link {
