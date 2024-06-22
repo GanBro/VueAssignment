@@ -1,4 +1,4 @@
-<!--Tickets.vue-->
+<!-- Tickets.vue -->
 <template>
   <el-row class="container">
     <el-row class="background">
@@ -43,9 +43,22 @@
 
       <!-- 底栏 -->
       <el-footer class="footer">
-        <div class="footer-content">
-          &copy; 2024 九寨沟景区 | 版权所有
+        <div class="footer-icons">
+          <img src="@/assets/footer/1.png" alt="World Natural Heritage" />
         </div>
+        <div class="footer-content">
+          <p>© 2002 - 2024 九寨沟风景名胜区管理局 蜀ICP备15014791号 | 技术支持[云竹软件&智慧旅游]</p>
+          <p>不良与违法信息举报电话：0837-7799309，举报邮箱：admin@jiuzhai.com</p>
+          <p>中国互联网举报中心 四川省互联网举报中心</p>
+        </div>
+        <div class="footer-icons">
+          <font-awesome-icon icon="fa-brands fa-weixin" class="icon" />
+          <font-awesome-icon icon="fa-brands fa-qq" class="icon" />
+          <font-awesome-icon icon="fa-brands fa-weibo" class="icon" />
+          <font-awesome-icon icon="fa-brands fa-facebook" class="icon" />
+          <font-awesome-icon icon="fa-brands fa-twitter" class="icon" />
+        </div>
+        <p class="back-to-top">^ 顶部</p>
       </el-footer>
     </el-row>
   </el-row>
@@ -90,7 +103,7 @@ export default {
 <style scoped>
 .container {
   width: 100%;
-  height: 1500px; /* 增加高度以适应底栏 */
+  height: 1700px; /* 增加高度以适应底栏 */
   position: relative;
 }
 
@@ -184,127 +197,119 @@ export default {
   font-variant: normal;
   text-transform: none;
   text-decoration: none;
-  display: flex; /* 使用 flex 布局 */
-  flex-direction: column; /* 垂直排列 */
-  align-items: center; /* 居中 */
 }
 
-.small-card-price .price {
-  margin-bottom: -50px; /* 价格和单位之间的距离 */
+.price {
+  font-size: 50px;
 }
 
-.small-card-price .unit {
-  font-size: 22.4px; /* 确保单位字体大小合适 */
-}
-
-.small-card-unit {
-  font-family: 'nexa', sans-serif;
-  font-size: 22.4px;
-  color: rgb(86, 99, 136);
-  line-height: 11.2px; /* 根据你的描述可能这个值太小，适当调整 */
-  font-weight: 700;
-  font-style: normal;
-  font-variant: normal;
-  text-transform: none;
-  text-decoration: none;
-  display: block; /* 强制换行 */
+.unit {
+  font-size: 30px;
 }
 
 .small-card-details {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
-  margin: -10px 0;
+  margin: 0;
 }
 
-.small-card-details li {
-  font-family: 'nexa', sans-serif;
-  font-size: 14.4px;
+.card-detail {
+  font-family: 'quando', sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
+  font-size: 22.4px;
   color: rgb(86, 99, 136);
-  line-height: 21.6px;
-  font-weight: 700;
+  line-height: 33.6px;
+  font-weight: 400;
   font-style: normal;
   font-variant: normal;
   text-transform: none;
   text-decoration: none;
-  margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 .small-card-button {
-  background-color: rgb(86, 99, 136);
-  color: rgb(255, 136, 60);
-  margin-top: 30px;
-  height: 40px;
+  background-color: rgb(255, 116, 40);
+  font-size: 20px;
+  width: 80%;
+  margin: 0 auto 10px auto;
 }
 
-.small-card-button:hover {
-  background-color: rgb(255, 255, 255); /* 背景变为白色 */
-  color: rgb(0, 0, 0); /* 字体变为黑色 */
-}
-
+/* 公告卡片样式 */
 .card-content1 {
   font-family: 'quando', sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
-  font-size: 24px;
-  color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0);
-  line-height: 36px;
+  font-size: 40px;
+  color: rgb(255, 117, 41);
+  line-height: 68.08px;
+  text-align: center;
   font-weight: 400;
   font-style: normal;
   font-variant: normal;
   text-transform: none;
   text-decoration: none;
-  text-align: left; /* 对齐方式改为左对齐 */
-  text-indent: 0px;
 }
 
 .card-body {
-  padding: 20px;
+  font-family: 'quando', sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  line-height: 54px;
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none;
+  margin-top: 20px;
 }
 
 .announcement-text {
-  font-family: 'quando', sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
-  font-size: 17.92px;
-  color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0);
-  line-height: 26.88px;
-  font-weight: 400;
-  font-style: normal;
-  font-variant: normal;
-  text-transform: none;
-  text-decoration: none;
-  text-indent: 2em; /* 首行缩进 */
+  margin-bottom: 10px;
 }
 
 .announcement-link {
-  font-family: 'quando', sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
-  font-size: 15.92px;
-  color: rgb(255, 72, 0);
-  background-color: rgba(0, 0, 0, 0);
-  line-height: 26.88px;
-  font-weight: 400;
-  font-style: normal;
-  font-variant: normal;
-  text-transform: none;
+  color: rgb(255, 116, 40);
   text-decoration: none;
-  text-indent: 0; /* 无首行缩进 */
-  margin-top: 70px; /* 增加与上方内容的距离 */
-  text-align: left; /* 左对齐 */
-  cursor: pointer;
+}
+
+.announcement-link:hover {
+  text-decoration: underline;
 }
 
 /* 底栏样式 */
 .footer {
-  background-color: rgb(86, 99, 136);
-  color: rgb(255, 255, 255);
+  background-color: #333;
+  color: #fff;
   text-align: center;
   padding: 20px 0;
-  position: absolute;
-  bottom: 0;
   width: 100%;
+  bottom: 0;
+  position: absolute; /* 固定在页面底部 */
+  left: 0;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.footer-content {
-  font-family: 'quando', sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
-  font-size: 16px;
-  line-height: 24px;
+.footer-icons img {
+  margin: 0 10px;
+}
+
+.footer-icons .icon {
+  margin: 0 10px;
+  color: #fff;
+  font-size: 24px;
+}
+
+.footer-content p {
+  margin: 5px 0;
+}
+
+.back-to-top {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.back-to-top:hover {
+  text-decoration: underline;
 }
 </style>
