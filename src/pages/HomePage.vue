@@ -59,8 +59,8 @@ export default {
 .page-container {
   position: relative;
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  height: 200vh; /* 改为200vh以允许垂直滚动 */
+  overflow-y: auto; /* 允许垂直滚动 */
 }
 
 .carousel-container {
