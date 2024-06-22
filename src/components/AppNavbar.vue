@@ -1,3 +1,4 @@
+<!--AppNavbar.vue-->
 <template>
   <nav :class="['navbar', { 'scrolled': isScrolled }]" :style="{ backgroundColor: navbarBackgroundColor }">
     <div class="navbar-container">
