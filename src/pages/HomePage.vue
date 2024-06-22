@@ -3,29 +3,29 @@
   <div class="page-container">
     <Navbar />
     <el-carousel :interval="5000" height="100vh" arrow="always" class="carousel-container">
-      <el-carousel-item v-for="(image, index) in images" :key="index">
+      <el-carousel-item v-for="(item, index) in items" :key="index">
         <div class="fullscreen-div">
-          <img :src="image" alt="Image" />
+          <img :src="item.image" alt="Image" />
+        </div>
+        <!-- 添加一个包含大字的div -->
+        <div class="text-container">
+          <div class="big-text1">
+            {{ item.title }}
+          </div>
+          <div class="big-text2">
+            {{ item.subtitle }}
+          </div>
         </div>
       </el-carousel-item>
     </el-carousel>
-    <!-- 添加一个包含大字的div -->
-    <div class="text-container">
-      <div class="big-text1">
-        春深似海
-      </div>
-      <div class="big-text2">
-        纸条发芽，花开遍地，万物在春风中摇曳生长。
-      </div>
-    </div>
   </div>
 </template>
 
 <script>
 import Navbar from '@/components/AppNavbar.vue';
-import image1 from '@/assets/首页01.png';
-import image2 from '@/assets/首页01.png';
-import image3 from '@/assets/首页01.png';
+import image1 from '@/assets/首页/春深似海.png';
+import image2 from '@/assets/首页/一碧千里.png';
+import image3 from '@/assets/首页/碧水微澜.png';
 
 export default {
   components: {
@@ -33,10 +33,22 @@ export default {
   },
   data() {
     return {
-      images: [
-        image1,
-        image2,
-        image3,
+      items: [
+        {
+          image: image1,
+          title: '春深似海',
+          subtitle: '纸条发芽，花开遍地，万物在春风中摇曳生长。',
+        },
+        {
+          image: image2,
+          title: '一碧千里',
+          subtitle: '绿意盎然的盛夏，谱写一场夏天的故事。',
+        },
+        {
+          image: image3,
+          title: '碧水微澜',
+          subtitle: '湛蓝的水，青翠的树，山中画，画中意，犹如仙境。',
+        },
       ],
     };
   },
@@ -79,9 +91,10 @@ export default {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   padding-left: 10%;
+  padding-top:10%; /* 调整这个值来调高文字位置 */
   pointer-events: none; /* 确保文字不会影响用户交互 */
 }
 
