@@ -18,6 +18,9 @@
         </div>
       </el-carousel-item>
     </el-carousel>
+    <el-container class="content-container">
+      <!-- 在这里添加你需要的内容 -->
+    </el-container>
   </div>
 </template>
 
@@ -61,6 +64,7 @@ export default {
   width: 100vw;
   height: 200vh; /* 改为200vh以允许垂直滚动 */
   overflow-y: auto; /* 允许垂直滚动 */
+  overflow-x: hidden; /* 禁止水平滚动 */
 }
 
 .carousel-container {
@@ -68,13 +72,15 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh; /* 确保轮播图占满视口 */
+  overflow-x: hidden; /* 禁止水平滚动 */
 }
 
 .fullscreen-div {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  overflow-x: hidden; /* 禁止水平滚动 */
 }
 
 .fullscreen-div img {
@@ -94,7 +100,7 @@ export default {
   justify-content: flex-start;
   align-items: flex-start;
   padding-left: 10%;
-  padding-top:10%; /* 调整这个值来调高文字位置 */
+  padding-top: 10%; /* 调整这个值来调高文字位置 */
   pointer-events: none; /* 确保文字不会影响用户交互 */
 }
 
@@ -111,5 +117,11 @@ export default {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   z-index: 1000;
   margin-top: 1rem;
+}
+
+.content-container {
+  margin-top: 100vh; /* 确保内容容器在轮播图下方 */
+  padding: 20px;
+  overflow-x: hidden; /* 禁止水平滚动 */
 }
 </style>
