@@ -1,106 +1,110 @@
 <template>
-  <div class="blue-background">
-    <div class="image-container">
-      <figure class="image-figure">
-        <img src="@/assets/标志景点/树正沟景点.png" alt="树正沟景点" class="image">
-      </figure>
-    </div>
+  <div class="home">
+    <div class="blue-background">
+      <div class="image-container">
+        <figure class="image-figure">
+          <img src="@/assets/标志景点/树正沟景点.png" alt="树正沟景点" class="image">
+        </figure>
+      </div>
 
-    <!-- 第一个轮播图 -->
-    <div class="carousel">
-      <i class="fa fa-chevron-left carousel-arrow left-arrow" aria-hidden="true" @click="prevSlide('first')"></i>
-      <div class="carousel-container">
-        <div v-for="(card, index) in visibleCards1" :key="index" class="carousel-card">
-          <figure class="image-figure">
-            <img :src="card.image" :alt="card.title" class="image">
-          </figure>
-          <div class="card-content">
-            <h2>{{ card.title }}</h2>
-            <p>{{ card.description }}</p>
-            <a href="#" class="details-link">详细</a>
+      <!-- 第一个轮播图 -->
+      <div class="carousel">
+        <i class="fa fa-chevron-left carousel-arrow left-arrow" aria-hidden="true" @click="prevSlide('first')"></i>
+        <div class="carousel-container">
+          <div v-for="(card, index) in visibleCards1" :key="index" class="carousel-card">
+            <figure class="image-figure">
+              <img :src="card.image" :alt="card.title" class="image">
+            </figure>
+            <div class="card-content">
+              <h2>{{ card.title }}</h2>
+              <p>{{ card.description }}</p>
+              <a href="#" class="details-link">详细</a>
+            </div>
           </div>
         </div>
+        <i class="fa fa-chevron-right carousel-arrow right-arrow" aria-hidden="true" @click="nextSlide('first')"></i>
       </div>
-      <i class="fa fa-chevron-right carousel-arrow right-arrow" aria-hidden="true" @click="nextSlide('first')"></i>
-    </div>
-    <br>
+      <br>
 
-    <div class="image-container">
-      <figure class="image-figure">
-        <img src="@/assets/标志景点/则查洼沟景点.png" alt="则查洼沟景点" class="image">
-      </figure>
-    </div>
+      <div class="image-container" style="margin-top: 700px">
+        <figure class="image-figure">
+          <img src="@/assets/标志景点/则查洼沟景点.png" alt="则查洼沟景点" class="image">
+        </figure>
+      </div>
 
-    <!-- 第二个轮播图 -->
-    <div class="carousel">
-<!--      <i class="fa fa-chevron-left carousel-arrow left-arrow" aria-hidden="true" @click="prevSlide('second')"></i>-->
-      <div class="carousel-container">
-        <div v-for="(card, index) in visibleCards2" :key="index" class="carousel-card">
-          <figure class="image-figure">
-            <img :src="card.image" :alt="card.title" class="image">
-          </figure>
-          <div class="card-content">
-            <h2>{{ card.title }}</h2>
-            <p>{{ card.description }}</p>
-            <a href="#" class="details-link">详细</a>
+      <!-- 第二个轮播图 -->
+      <div class="carousel">
+        <!--      <i class="fa fa-chevron-left carousel-arrow left-arrow" aria-hidden="true" @click="prevSlide('second')"></i>-->
+        <div class="carousel-container">
+          <div v-for="(card, index) in visibleCards2" :key="index" class="carousel-card">
+            <figure class="image-figure">
+              <img :src="card.image" :alt="card.title" class="image">
+            </figure>
+            <div class="card-content">
+              <h2>{{ card.title }}</h2>
+              <p>{{ card.description }}</p>
+              <a href="#" class="details-link">详细</a>
+            </div>
           </div>
         </div>
+        <!--      <i class="fa fa-chevron-right carousel-arrow right-arrow" aria-hidden="true" @click="nextSlide('second')"></i>-->
       </div>
-<!--      <i class="fa fa-chevron-right carousel-arrow right-arrow" aria-hidden="true" @click="nextSlide('second')"></i>-->
-    </div>
-    <br>
+      <br>
 
-    <div class="image-container">
-      <figure class="image-figure">
-        <img src="@/assets/标志景点/日则沟景点.png" alt="日则沟景点" class="image">
-      </figure>
-    </div>
+      <div class="image-container" style="margin-top: 700px">
+        <figure class="image-figure">
+          <img src="@/assets/标志景点/日则沟景点.png" alt="日则沟景点" class="image">
+        </figure>
+      </div>
 
-    <!-- 第三个轮播图 -->
-    <div class="carousel">
-      <i class="fa fa-chevron-left carousel-arrow left-arrow" aria-hidden="true" @click="prevSlide('third')"></i>
-      <div class="carousel-container">
-        <div v-for="(card, index) in visibleCards3" :key="index" class="carousel-card">
-          <figure class="image-figure">
-            <img :src="card.image" :alt="card.title" class="image">
-          </figure>
-          <div class="card-content">
-            <h2>{{ card.title }}</h2>
-            <p>{{ card.description }}</p>
-            <a href="#" class="details-link">详细</a>
+      <!-- 第三个轮播图 -->
+      <div class="carousel">
+        <i class="fa fa-chevron-left carousel-arrow left-arrow" aria-hidden="true" @click="prevSlide('third')"></i>
+        <div class="carousel-container">
+          <div v-for="(card, index) in visibleCards3" :key="index" class="carousel-card">
+            <figure class="image-figure">
+              <img :src="card.image" :alt="card.title" class="image">
+            </figure>
+            <div class="card-content">
+              <h2>{{ card.title }}</h2>
+              <p>{{ card.description }}</p>
+              <a href="#" class="details-link">详细</a>
+            </div>
           </div>
         </div>
+        <i class="fa fa-chevron-right carousel-arrow right-arrow" aria-hidden="true" @click="nextSlide('third')"></i>
       </div>
-      <i class="fa fa-chevron-right carousel-arrow right-arrow" aria-hidden="true" @click="nextSlide('third')"></i>
-    </div>
-    <br>
+      <br>
 
-    <div class="image-container">
-      <figure class="image-figure">
-        <img src="@/assets/标志景点/扎如沟景点.png" alt="扎如沟景点" class="image">
-      </figure>
-    </div>
+      <div class="image-container" style="margin-top: 700px">
+        <figure class="image-figure">
+          <img src="@/assets/标志景点/扎如沟景点.png" alt="扎如沟景点" class="image">
+        </figure>
+      </div>
 
-    <!-- 第四个轮播图 -->
-    <div class="carousel">
-      <i class="fa fa-chevron-left carousel-arrow left-arrow" aria-hidden="true" @click="prevSlide('fourth')"></i>
-      <div class="carousel-container">
-        <div v-for="(card, index) in visibleCards4" :key="index" class="carousel-card">
-          <figure class="image-figure">
-            <img :src="card.image" :alt="card.title" class="image">
-          </figure>
-          <div class="card-content">
-            <h2>{{ card.title }}</h2>
-            <p>{{ card.description }}</p>
-            <a href="#" class="details-link">详细</a>
+      <!-- 第四个轮播图 -->
+      <div class="carousel">
+        <i class="fa fa-chevron-left carousel-arrow left-arrow" aria-hidden="true" @click="prevSlide('fourth')"></i>
+        <div class="carousel-container">
+          <div v-for="(card, index) in visibleCards4" :key="index" class="carousel-card">
+            <figure class="image-figure">
+              <img :src="card.image" :alt="card.title" class="image">
+            </figure>
+            <div class="card-content">
+              <h2>{{ card.title }}</h2>
+              <p>{{ card.description }}</p>
+              <a href="#" class="details-link">详细</a>
+            </div>
           </div>
         </div>
+        <i class="fa fa-chevron-right carousel-arrow right-arrow" aria-hidden="true" @click="nextSlide('fourth')"></i>
       </div>
-      <i class="fa fa-chevron-right carousel-arrow right-arrow" aria-hidden="true" @click="nextSlide('fourth')"></i>
-    </div>
-    <br>
+      <br>
 
+    </div>
+    <app-footer></app-footer>
   </div>
+
 
 
 </template>
@@ -136,8 +140,10 @@ import 宝镜岩 from '@/assets/标志景点/宝镜岩.png';
 import 扎依扎嘎神山 from '@/assets/标志景点/扎依扎嘎神山.png';
 import 扎如寺 from '@/assets/标志景点/扎如寺.png';
 import 扎如沟黑海 from '@/assets/标志景点/扎如沟黑海.png';
+import AppFooter from "@/components/AppFooter.vue";
 
 export default {
+  components: {AppFooter},
   data() {
     return {
       currentSlide1: 0,
@@ -358,10 +364,16 @@ export default {
 </script>
 
 <style scoped>
+.home {
+  position: relative; /* 确保父容器有相对定位或绝对定位 */
+  min-height: 100vh; /* 确保内容高度至少为视口高度，以便页脚可以在底部 */
+  padding-bottom: 0; /* 为页脚预留空间，避免内容覆盖 */
+}
 /* 设置蓝色背景 */
 .blue-background {
   background-color: rgb(126, 202, 186);
-  min-height: 100vh; /* 确保背景颜色覆盖整个视口高度 */
+  //min-height: 100vh; /* 确保背景颜色覆盖整个视口高度 */
+  height: 5500px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* 调整为顶部对齐 */
@@ -374,7 +386,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px; /* 图片和卡片之间的间距 */
 }
 
 .image-figure {
@@ -470,6 +481,7 @@ export default {
 }
 
 .carousel-arrow {
+  margin-top: 300px;
   font-size: 2rem; /* 调整图标大小 */
   cursor: pointer;
   color: white; /* 箭头颜色 */
@@ -495,7 +507,7 @@ export default {
 /* 使用Element Plus的箭头图标 */
 .el-button {
   position: absolute;
-  top: 50%;
+  top: 100%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;

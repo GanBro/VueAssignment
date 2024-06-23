@@ -1,169 +1,173 @@
 
 <!-- HomePage.vue -->
 <template>
-  <div class="page-container">
-    <Navbar />
-    <el-carousel :interval="5000" height="100vh" arrow="always" class="carousel-container" motion-blur>
-      <el-carousel-item v-for="(item, index) in items" :key="index">
-        <div class="fullscreen-div">
-          <img :src="item.image" alt="Image"/>
-        </div>
-        <!-- 添加一个包含大字的div -->
-        <div class="text-container">
-          <div class="big-text1">
-            {{ item.title }}
+  <div class="home">
+    <div class="page-container">
+      <Navbar />
+      <el-carousel :interval="5000" height="100vh" arrow="always" class="carousel-container" motion-blur>
+        <el-carousel-item v-for="(item, index) in items" :key="index">
+          <div class="fullscreen-div">
+            <img :src="item.image" alt="Image"/>
           </div>
-          <div class="big-text2">
-            {{ item.subtitle }}
+          <!-- 添加一个包含大字的div -->
+          <div class="text-container">
+            <div class="big-text1">
+              {{ item.title }}
+            </div>
+            <div class="big-text2">
+              {{ item.subtitle }}
+            </div>
           </div>
-        </div>
-      </el-carousel-item>
-    </el-carousel>
-    <div class="content-container">
-      <div class="news-header">新闻 · 政务</div>
-      <el-row :gutter="20">
-        <el-col :span="13">
-          <div class="news-section">
-            <h3>景区新闻</h3>
-            <ul>
-              <li v-for="(news, index) in newsList" :key="index">
-                <span>{{ news.title }}</span>
-                <span>{{ news.date }}</span>
-              </li>
-            </ul>
-          </div>
-        </el-col>
-        <el-col :span="11">
-          <div class="announcement-section">
-            <h3>景区公告</h3>
-            <ul>
-              <li v-for="(announcement, index) in announcements" :key="index">
-                <span>{{ announcement.title }}</span>
-                <span>{{ announcement.date }}</span>
-              </li>
-            </ul>
-          </div>
-          <div class="visitor-stats" style="margin-top: -15px">
-            <ul>
-              <li v-for="(stat, index) in visitorStats" :key="index">
-                <span>{{ stat.title }}</span>
-                <span>{{ stat.date }}</span>
-              </li>
-            </ul>
-          </div>
-        </el-col>
-      </el-row>
-      <!-- 新增部分 -->
-      <el-row :gutter="0" class="special-section">
-        <el-col :span="15">
-          <el-row :gutter="0">
-            <el-col :span="12">
-              <div class="special-item">
-                <img src="@/assets/首页/special1.png" alt="九寨沟世界自然遗产地APP">
-              </div>
-            </el-col>
-            <el-col :span="12">
-              <div class="special-item">
-                <img src="@/assets/首页/special2.png" alt="第十八届国际冰瀑旅游节">
-              </div>
-            </el-col>
-          </el-row>
-          <el-row :gutter="0">
-            <el-col :span="12">
-              <div class="special-item">
-                <img src="@/assets/首页/special3.png" alt="二十大专题">
-              </div>
-            </el-col>
-            <el-col :span="12">
-              <div class="special-item">
-                <img src="@/assets/首页/special4.png" alt="日寨文化节">
-              </div>
-            </el-col>
-          </el-row>
-          <el-row :gutter="0">
-            <el-col :span="12">
-              <div class="special-item">
-                <img src="@/assets/首页/special5.png" alt="阿坝州全域旅游">
-              </div>
-            </el-col>
-            <el-col :span="6">
-              <div class="special-item">
-                <img src="@/assets/首页/special6.png" alt="云游九寨实景景观直播">
-              </div>
-            </el-col>
-            <el-col :span="6">
-              <div class="special-item">
-                <img src="@/assets/首页/special7.png" alt="更多专题...">
-              </div>
-            </el-col>
-          </el-row>
-        </el-col>
+        </el-carousel-item>
+      </el-carousel>
+      <div class="content-container">
+        <div class="news-header">新闻 · 政务</div>
+        <el-row :gutter="20">
+          <el-col :span="13">
+            <div class="news-section">
+              <h3>景区新闻</h3>
+              <ul>
+                <li v-for="(news, index) in newsList" :key="index">
+                  <span>{{ news.title }}</span>
+                  <span>{{ news.date }}</span>
+                </li>
+              </ul>
+            </div>
+          </el-col>
+          <el-col :span="11">
+            <div class="announcement-section">
+              <h3>景区公告</h3>
+              <ul>
+                <li v-for="(announcement, index) in announcements" :key="index">
+                  <span>{{ announcement.title }}</span>
+                  <span>{{ announcement.date }}</span>
+                </li>
+              </ul>
+            </div>
+            <div class="visitor-stats" style="margin-top: -15px">
+              <ul>
+                <li v-for="(stat, index) in visitorStats" :key="index">
+                  <span>{{ stat.title }}</span>
+                  <span>{{ stat.date }}</span>
+                </li>
+              </ul>
+            </div>
+          </el-col>
+        </el-row>
+        <!-- 新增部分 -->
+        <el-row :gutter="0" class="special-section">
+          <el-col :span="15">
+            <el-row :gutter="0">
+              <el-col :span="12">
+                <div class="special-item">
+                  <img src="@/assets/首页/special1.png" alt="九寨沟世界自然遗产地APP">
+                </div>
+              </el-col>
+              <el-col :span="12">
+                <div class="special-item">
+                  <img src="@/assets/首页/special2.png" alt="第十八届国际冰瀑旅游节">
+                </div>
+              </el-col>
+            </el-row>
+            <el-row :gutter="0">
+              <el-col :span="12">
+                <div class="special-item">
+                  <img src="@/assets/首页/special3.png" alt="二十大专题">
+                </div>
+              </el-col>
+              <el-col :span="12">
+                <div class="special-item">
+                  <img src="@/assets/首页/special4.png" alt="日寨文化节">
+                </div>
+              </el-col>
+            </el-row>
+            <el-row :gutter="0">
+              <el-col :span="12">
+                <div class="special-item">
+                  <img src="@/assets/首页/special5.png" alt="阿坝州全域旅游">
+                </div>
+              </el-col>
+              <el-col :span="6">
+                <div class="special-item">
+                  <img src="@/assets/首页/special6.png" alt="云游九寨实景景观直播">
+                </div>
+              </el-col>
+              <el-col :span="6">
+                <div class="special-item">
+                  <img src="@/assets/首页/special7.png" alt="更多专题...">
+                </div>
+              </el-col>
+            </el-row>
+          </el-col>
 
-        <el-col :span="9">
-          <el-row>
-            <el-col :span="12">
-              <div class="special-item">
-                <img src="@/assets/首页/special8.png" alt="书记信箱">
-              </div>
-            </el-col>
-            <el-col :span="12">
-              <div class="special-item">
-                <img src="@/assets/首页/special9.png" alt="局长信箱">
-              </div>
-            </el-col>
-          </el-row>
-          <el-row>
-            <el-col :span="12">
-              <div class="special-item">
-                <img src="@/assets/首页/special10.png" alt="旅游咨询">
-              </div>
-            </el-col>
-            <el-col :span="12">
-              <div class="special-item">
-                <img src="@/assets/首页/special11.png" alt="旅游投诉">
-              </div>
-            </el-col>
-          </el-row>
-          <el-row>
-            <el-col :span="12">
-              <div class="special-item">
-                <img src="@/assets/首页/special12.png" alt="游客意见调查表">
-              </div>
-            </el-col>
-            <el-col :span="12">
-              <div class="special-item">
-                <img src="@/assets/首页/special13.png" alt="游客满意度调查">
-              </div>
-            </el-col>
-          </el-row>
+          <el-col :span="9">
+            <el-row>
+              <el-col :span="12">
+                <div class="special-item">
+                  <img src="@/assets/首页/special8.png" alt="书记信箱">
+                </div>
+              </el-col>
+              <el-col :span="12">
+                <div class="special-item">
+                  <img src="@/assets/首页/special9.png" alt="局长信箱">
+                </div>
+              </el-col>
+            </el-row>
+            <el-row>
+              <el-col :span="12">
+                <div class="special-item">
+                  <img src="@/assets/首页/special10.png" alt="旅游咨询">
+                </div>
+              </el-col>
+              <el-col :span="12">
+                <div class="special-item">
+                  <img src="@/assets/首页/special11.png" alt="旅游投诉">
+                </div>
+              </el-col>
+            </el-row>
+            <el-row>
+              <el-col :span="12">
+                <div class="special-item">
+                  <img src="@/assets/首页/special12.png" alt="游客意见调查表">
+                </div>
+              </el-col>
+              <el-col :span="12">
+                <div class="special-item">
+                  <img src="@/assets/首页/special13.png" alt="游客满意度调查">
+                </div>
+              </el-col>
+            </el-row>
+          </el-col>
+        </el-row>
+      </div>
+
+      <el-row>
+        <el-col :span="8" class="custom-text" style="margin-left: 50px">
+          视频
+          <img src="@/assets/首页/视频.png" alt="视频" style="height: 70%;width: 80%">
+        </el-col>
+        <el-col :span="15" class="custom-text">
+          热点资讯
+          <el-carousel :interval="5000" indicator-position="none" motion-blur>
+            <el-carousel-item v-for="item in items1" :key="item.id">
+              <img :src="item.src" :alt="item.alt" style="height: 100%;">
+            </el-carousel-item>
+          </el-carousel>
         </el-col>
       </el-row>
+
+      <el-row class="news-header" style="margin-left: 42%">
+        旅行 · 服务
+      </el-row>
+
+      <el-row>
+        <img src="@/assets/首页/旅行服务.png" style="margin-left: 10%; width: 80%">
+      </el-row>
+
     </div>
-
-    <el-row>
-      <el-col :span="8" class="custom-text" style="margin-left: 50px">
-        视频
-        <img src="@/assets/首页/视频.png" alt="视频" style="height: 70%;width: 80%">
-      </el-col>
-      <el-col :span="15" class="custom-text">
-        热点资讯
-        <el-carousel :interval="5000" indicator-position="none" motion-blur>
-          <el-carousel-item v-for="item in items1" :key="item.id">
-            <img :src="item.src" :alt="item.alt" style="height: 100%;">
-          </el-carousel-item>
-        </el-carousel>
-      </el-col>
-    </el-row>
-
-    <el-row class="news-header" style="margin-left: 42%">
-      旅行 · 服务
-    </el-row>
-    
-    <el-row>
-      <img src="@/assets/首页/旅行服务.png" style="margin-left: 10%; width: 80%">
-    </el-row>
-
+    <app-footer></app-footer>
   </div>
+
 
 </template>
 
@@ -172,9 +176,11 @@ import Navbar from '@/components/AppNavbar.vue';
 import image1 from '@/assets/首页/春深似海.png';
 import image2 from '@/assets/首页/一碧千里.png';
 import image3 from '@/assets/首页/碧水微澜.png';
+import AppFooter from "@/components/AppFooter.vue";
 
 export default {
   components: {
+    AppFooter,
     Navbar,
   },
   data() {
@@ -234,6 +240,11 @@ export default {
 };
 </script>
 <style>
+.home {
+  position: relative; /* 确保父容器有相对定位或绝对定位 */
+  min-height: 100vh; /* 确保内容高度至少为视口高度，以便页脚可以在底部 */
+  padding-bottom: 360px; /* 为页脚预留空间，避免内容覆盖 */
+}
 .page-container {
   position: relative;
   width: 100vw;
