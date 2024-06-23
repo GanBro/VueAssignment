@@ -24,213 +24,158 @@
       <div class="center-card2">
         <el-card class="box-card2">
           <div class="card-content">
-            <div class="body-content">
-              <!-- 图片部分 -->
-              <div class="image-container">
-                <figure>
-                  <img src="../assets/宗教民俗/嘛智文化节.png" alt="嘛智文化节">
-                  <figcaption>嘛智文化节</figcaption>
-                </figure>
-                <figure>
-                  <img src="@/assets/宗教民俗/日桑文化节.png" alt="日桑文化节">
-                  <figcaption>日桑文化节</figcaption>
-                </figure>
+            <!-- 图片和文字部分容器 -->
+            <div class="content-container">
+              <!-- 第一个节日的容器 -->
+              <div class="festival">
+                <img src="../assets/宗教民俗/嘛智文化节.png" alt="嘛智文化节">
+                <p>“嘛智”是苯教三颯辞或三大真言中的一部分，通常称为“八字真言”。九寨沟扎如寺每年在农历四月初七至十六日举行嘛智文化节，游客们均可参与进来。</p>
               </div>
-              <!-- 添加文字部分 -->
-              <div class="text-container">
-                <div class="text-left">
-                  <p>“嘛智”是苯教三颯辞或三大真言中的一部分，通常称为“八字真言”。九寨沟扎如寺每年在农历四月初七至十六日举行嘛智文化节，游客们均可参与进来。</p>
-                </div>
-                <div class="text-right">
-                  <p>日桑文化节又被称为祭“神山、神水”的节日。九寨沟在每年藏庆4月（阳历6月）都会举行一次，时间为期5天，游客们都可以参与进来。</p>
-                </div>
+              <!-- 第二个节日的容器 -->
+              <div class="festival">
+                <img src="@/assets/宗教民俗/日桑文化节.png" alt="日桑文化节">
+                <p>日桑文化节又被称为祭“神山、神水”的节日。九寨沟在每年藏庆4月（阳历6月）都会举行一次，时间为期5天，游客们都可以参与进来。</p>
               </div>
             </div>
           </div>
         </el-card>
       </div>
 
-
-
-      <!-- 第三个卡片 -->
       <div class="center-card3">
         <el-card class="box-card3">
           <div class="card-content">
-            <div class="body-content">
-              <!-- 图片部分 -->
-              <div class="image-container">
-                <figure>
-                  <img src="../assets/宗教民俗/苯教.png" alt="苯教">
-                  <figcaption>苯教</figcaption>
-                </figure>
-                <figure>
-                  <img src="@/assets/宗教民俗/龙达.png" alt="龙达">
-                  <figcaption>龙达</figcaption>
-                </figure>
+            <!-- 图片和文字部分容器 -->
+            <div class="content-container">
+              <!-- 第一个节日的容器 -->
+              <div class="festival">
+                <img src="../assets/宗教民俗/苯教.png" alt="苯教">
+                <p>九寨沟的藏族同胞信仰苯教，公元前二世纪，西藏的苯教传到了九寨沟，与当时原始的巫教结合。直到今天，阿坝藏族羌族自治州仍然保存有60座苯教寺庙。</p>
               </div>
-              <!-- 添加文字部分 -->
-              <div class="text-container">
-                <div class="text-left">
-                  <p>九寨沟的藏族同胞信仰苯教，公元前二世纪，西藏的苯教传到了九寨沟，与当时原始的巫教结合。直到今天，阿坝藏族羌族自治州仍然保存有60座苯教寺庙。</p>
-                </div>
-                <div class="text-right">
-                  <p>龙达是原始苯教崇拜自然祭祀神灵的产物，也是藏传佛教祭祀各种神灵的主要内容之一。现今藏族社会信教者放“龙达”，主要是为了祈求神灵保佑自己吉祥如意。</p>
-                </div>
+              <!-- 第二个节日的容器 -->
+              <div class="festival">
+                <img src="@/assets/宗教民俗/龙达.png" alt="龙达">
+                <p>龙达是原始苯教崇拜自然祭祀神灵的产物，也是藏传佛教祭祀各种神灵的主要内容之一。现今藏族社会信教者放“龙达”，主要是为了祈求神灵保佑自己吉祥如意。</p>
               </div>
             </div>
           </div>
         </el-card>
       </div>
 
-      <!-- 第四个卡片 -->
       <div class="center-card4">
         <el-card class="box-card4">
           <div class="card-content">
-            <div class="body-content">
-              <!-- 图片部分 -->
-              <div class="image-container">
-                <figure>
-                  <img src="../assets/宗教民俗/藏历新年.png" alt="藏历新年">
-                  <figcaption>藏历新年</figcaption>
-                </figure>
-                <figure>
-                  <img src="@/assets/宗教民俗/民俗风情月.png" alt="民俗风情月">
-                  <figcaption>民俗风情月</figcaption>
-                </figure>
+            <!-- 图片和文字部分容器 -->
+            <div class="content-container">
+              <!-- 第一个节日的容器 -->
+              <div class="festival">
+                <img src="../assets/宗教民俗/藏历新年.png" alt="藏历新年">
+                <p>现在的藏历起源于公元 1027 年，从此，藏历的第一天固定为藏历年。藏历新年是藏族最盛大、最为隆重的传统节日，是藏族人民一年一度的新春佳节。</p>
               </div>
-              <!-- 添加文字部分 -->
-              <div class="text-container">
-                <div class="text-left">
-                  <p>现在的藏历起源于公元 1027 年，从此，藏历的第一天固定为藏历年。藏历新年是藏族最盛大、最为隆重的传统节日，是藏族人民一年一度的新春佳节。</p>
-                </div>
-                <div class="text-right">
-                  <p>九寨沟民俗风情月在每年的3、4月举行，游客均可参加。期间可观瞻则查洼古藏寨建筑文化，藏文化学者带您感受古朴安多文化，畅游九寨历史长河。</p>
-                </div>
+              <!-- 第二个节日的容器 -->
+              <div class="festival">
+                <img src="@/assets/宗教民俗/民俗风情月.png" alt="民俗风情月">
+                <p>九寨沟民俗风情月在每年的3、4月举行，游客均可参加。期间可观瞻则查洼古藏寨建筑文化，藏文化学者带您感受古朴安多文化，畅游九寨历史长河。</p>
               </div>
             </div>
           </div>
         </el-card>
       </div>
 
-      <!-- 第五个卡片 -->
       <div class="center-card5">
         <el-card class="box-card5">
           <div class="card-content">
-            <div class="body-content">
-              <!-- 图片部分 -->
-              <div class="image-container">
-                <figure>
-                  <img src="../assets/宗教民俗/玛尼堆.png" alt="玛尼堆">
-                  <figcaption>玛尼堆</figcaption>
-                </figure>
-                <figure>
-                  <img src="@/assets/宗教民俗/佛塔.png" alt="佛塔">
-                  <figcaption>佛塔</figcaption>
-                </figure>
+            <!-- 图片和文字部分容器 -->
+            <div class="content-container">
+              <!-- 第一个节日的容器 -->
+              <div class="festival">
+                <img src="../assets/宗教民俗/玛尼堆.png" alt="玛尼堆">
+                <p>在九寨沟景区里，常见堆积在十字路口、湖边和村寨的出入口处刻有经文的石头或神箭，堆上还插有经幡，这就是“玛尼堆”，九寨沟藏区称为“牙则”。</p>
+
               </div>
-              <!-- 添加文字部分 -->
-              <div class="text-container">
-                <div class="text-left">
-                  <p>在九寨沟景区里，常见堆积在十字路口、湖边和村寨的出入口处刻有经文的石头或神箭，堆上还插有经幡，这就是“玛尼堆”，九寨沟藏区称为“牙则”。</p>
-                </div>
-                <div class="text-right">
-                  <p>藏传佛教中塔分为灵塔和佛塔两种。灵塔供奉在寺院里，用金或铜铸成，是活佛塔葬的一种形式。佛塔则建在寺院和各村寨人口较少的地方。塔的原色必须是白色。</p>
-                </div>
+              <!-- 第二个节日的容器 -->
+              <div class="festival">
+                <img src="@/assets/宗教民俗/佛塔.png" alt="佛塔">
+                <p>藏传佛教中塔分为灵塔和佛塔两种。灵塔供奉在寺院里，用金或铜铸成，是活佛塔葬的一种形式。佛塔则建在寺院和各村寨人口较少的地方。塔的原色必须是白色。</p>
               </div>
             </div>
           </div>
         </el-card>
       </div>
 
-      <!-- 第六个卡片 -->
       <div class="center-card6">
         <el-card class="box-card6">
           <div class="card-content">
-            <div class="body-content">
-              <!-- 图片部分 -->
-              <div class="image-container">
-                <figure>
-                  <img src="../assets/宗教民俗/转经.png" alt="转经">
-                  <figcaption>转经</figcaption>
-                </figure>
-                <figure>
-                  <img src="@/assets/宗教民俗/请山神.png" alt="请山神">
-                  <figcaption>请山神</figcaption>
-                </figure>
+            <!-- 图片和文字部分容器 -->
+            <div class="content-container">
+              <!-- 第一个节日的容器 -->
+              <div class="festival">
+                <img src="../assets/宗教民俗/转经.png" alt="转经">
+
+                <p>在九寨沟，你还可以看到无处不在的转经筒。转经筒有大有小，小的为手持转经筒，供信徒们在任何场所不停地摇转，大的固定在寺院的转经道上。</p>
+
+
               </div>
-              <!-- 添加文字部分 -->
-              <div class="text-container">
-                <div class="text-left">
-                  <p>在九寨沟，你还可以看到无处不在的转经筒。转经筒有大有小，小的为手持转经筒，供信徒们在任何场所不停地摇转，大的固定在寺院的转经道上。</p>
-                </div>
-                <div class="text-right">
-                  <p>正月十五，为了预知新年的未来，几乎每个寨子都要十分隆重地搞一次请山神的活动。请山神的两位姑娘，是由法师根据当年天文历法推算的生辰八字来确定的。</p>
-                </div>
+              <!-- 第二个节日的容器 -->
+              <div class="festival">
+                <img src="@/assets/宗教民俗/请山神.png" alt="请山神">
+
+                <p>正月十五，为了预知新年的未来，几乎每个寨子都要十分隆重地搞一次请山神的活动。请山神的两位姑娘，是由法师根据当年天文历法推算的生辰八字来确定的。</p>
+
               </div>
             </div>
           </div>
         </el-card>
       </div>
 
-      <!-- 第七个卡片 -->
       <div class="center-card7">
         <el-card class="box-card7">
           <div class="card-content">
-            <div class="body-content">
-              <!-- 图片部分 -->
-              <div class="image-container">
-                <figure>
-                  <img src="../assets/宗教民俗/春节联欢会.png" alt="春节联欢会">
-                  <figcaption>春节联欢会</figcaption>
-                </figure>
-                <figure>
-                  <img src="@/assets/宗教民俗/跳锅庄.png" alt="跳锅庄">
-                  <figcaption>跳锅庄</figcaption>
-                </figure>
+            <!-- 图片和文字部分容器 -->
+            <div class="content-container">
+              <!-- 第一个节日的容器 -->
+              <div class="festival">
+                <img src="../assets/宗教民俗/春节联欢会.png" alt="春节联欢会">
+                <p>请山神活动结束后，全寨最热闹的场面开始了，他们围成一个圈，通宵达旦欢歌笑语。在这种文化氛围中，凝聚一代又一代的九寨沟人勤劳勇敢、团结互爱的精神。</p>
+
               </div>
-              <!-- 添加文字部分 -->
-              <div class="text-container">
-                <div class="text-left">
-                  <p>请山神活动结束后，全寨最热闹的场面开始了，他们围成一个圈，通宵达旦欢歌笑语。在这种文化氛围中，凝聚一代又一代的九寨沟人勤劳勇敢、团结互爱的精神。</p>
-                </div>
-                <div class="text-right">
-                  <p>锅庄舞，又称为“果卓”、“歌庄”、“卓”等，藏语意为圆圈歌舞，是藏族三大民间舞蹈之一。其包含丰富的藏族文化内涵，地域特色鲜明，有较高的艺术和社会价值。</p>
-                </div>
+              <!-- 第二个节日的容器 -->
+              <div class="festival">
+                <img src="@/assets/宗教民俗/跳锅庄.png" alt="跳锅庄">
+                <p>锅庄舞，又称为“果卓”、“歌庄”、“卓”等，藏语意为圆圈歌舞，是藏族三大民间舞蹈之一。其包含丰富的藏族文化内涵，地域特色鲜明，有较高的艺术和社会价值。</p>
               </div>
             </div>
           </div>
         </el-card>
       </div>
 
-      <!-- 第八个卡片 -->
       <div class="center-card8">
         <el-card class="box-card8">
           <div class="card-content">
-            <div class="body-content">
-              <!-- 图片部分 -->
-              <div class="image-container">
-                <figure>
-                  <img src="../assets/宗教民俗/桑烟.png" alt="桑烟">
-                  <figcaption>桑烟</figcaption>
-                </figure>
-                <figure>
-                  <img src="@/assets/宗教民俗/背水习惯.png" alt="背水习惯">
-                  <figcaption>背水习惯</figcaption>
-                </figure>
+            <!-- 图片和文字部分容器 -->
+            <div class="content-container">
+              <!-- 第一个节日的容器 -->
+              <div class="festival">
+                <img src="../assets/宗教民俗/桑烟.png" alt="桑烟">
+                <p>“桑”是藏语的译音，本义为“净”。桑烟又称熏香。桑烟的发源地在今西藏阿里地区，沿袭至今已有3000余年的历史，是宗教活动中的重要仪式之一。</p>
+
+
               </div>
-              <!-- 添加文字部分 -->
-              <div class="text-container">
-                <div class="text-left">
-                  <p>“桑”是藏语的译音，本义为“净”。桑烟又称熏香。桑烟的发源地在今西藏阿里地区，沿袭至今已有3000余年的历史，是宗教活动中的重要仪式之一。</p>
-                </div>
-                <div class="text-right">
-                  <p>九寨沟在每一年的新年和日桑文化节期间都会有背水习俗，游客们均可参与。九寨沟藏族同胞要到海子背水，第一声鸡叫后背回新年最早圣水，供全家人团圆饮用。</p>
-                </div>
+              <!-- 第二个节日的容器 -->
+              <div class="festival">
+                <img src="@/assets/宗教民俗/背水习惯.png" alt="背水习惯">
+                <p>九寨沟在每一年的新年和日桑文化节期间都会有背水习俗，游客们均可参与。九寨沟藏族同胞要到海子背水，第一声鸡叫后背回新年最早圣水，供全家人团圆饮用。</p>
+
               </div>
             </div>
           </div>
         </el-card>
       </div>
+
+
+
+
+
+
     </div>
     <app-footer></app-footer>
   </div>
@@ -241,7 +186,6 @@
 import AppFooter from "@/components/AppFooter.vue";
 
 export default {
-  name: 'About',
   components: {AppFooter},
 };
 </script>
@@ -250,7 +194,7 @@ export default {
 .home {
   position: relative; /* 确保父容器有相对定位或绝对定位 */
   min-height: 100vh; /* 确保内容高度至少为视口高度，以便页脚可以在底部 */
-  padding-bottom: 4000px; /* 为页脚预留空间，避免内容覆盖 */
+  padding-bottom: 4030px; /* 为页脚预留空间，避免内容覆盖 */
 }
 .religionFolklore-page {
   position: relative; /* 确保子元素可以使用绝对定位 */
@@ -282,10 +226,10 @@ export default {
 }
 
 .center-card1, .center-card2, .center-card3, .center-card4, .center-card5, .center-card6, .center-card7, .center-card8 {
-  position: absolute; /* 使用绝对定位 */
-  left: 50%; /* 固定的左侧位置 */
-  transform: translateX(-50%); /* 使卡片水平居中 */
-  z-index: 10; /* 确保卡片在最上层 */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
 }
 
 .center-card1 {
@@ -297,22 +241,22 @@ export default {
 }
 
 .center-card3 {
-  top: 970px; /* 第三个卡片的位置 */
+  top: 980px; /* 第三个卡片的位置 */
 }
 .center-card4 {
-  top: 1540px;
+  top: 1560px;
 }
 .center-card5 {
-  top: 2111px;
+  top: 2140px;
 }
 .center-card6 {
-  top: 2680px;
+  top: 2720px;
 }
 .center-card7 {
-  top: 3250px;
+  top: 3300px;
 }
 .center-card8 {
-  top: 3830px;
+  top: 3880px;
 }
 
 .box-card1 {
@@ -325,53 +269,53 @@ export default {
   background-color: rgb(21, 34, 72);
 }
 .box-card2 {
-  width: 1100px; /* 卡片宽度 */
-  height: 520px; /* 卡片高度 */
-  overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
-  padding: 20px; /* 增加卡片内边距 */
+  width: 1100px;
+  height: 530px;
+  overflow: auto;
+  padding: 20px;
 }
 .box-card3 {
   width: 1100px; /* 卡片宽度 */
-  height: 520px; /* 卡片高度 */
+  height: 530px; /* 卡片高度 */
   overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
   padding: 20px; /* 增加卡片内边距 */
 }
 .box-card4 {
   width: 1100px; /* 卡片宽度 */
-  height: 520px; /* 卡片高度 */
+  height: 530px; /* 卡片高度 */
   overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
   padding: 20px; /* 增加卡片内边距 */
 }
 .box-card5 {
   width: 1100px; /* 卡片宽度 */
-  height: 520px; /* 卡片高度 */
+  height: 530px; /* 卡片高度 */
   overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
   padding: 20px; /* 增加卡片内边距 */
 }
 .box-card6 {
   width: 1100px; /* 卡片宽度 */
-  height: 520px; /* 卡片高度 */
+  height: 530px; /* 卡片高度 */
   overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
   padding: 20px; /* 增加卡片内边距 */
 }
 .box-card7 {
   width: 1100px; /* 卡片宽度 */
-  height: 520px; /* 卡片高度 */
+  height: 530px; /* 卡片高度 */
   overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
   padding: 20px; /* 增加卡片内边距 */
 }
 .box-card8 {
   width: 1100px; /* 卡片宽度 */
-  height: 520px; /* 卡片高度 */
+  height: 530px; /* 卡片高度 */
   overflow: auto; /* 当内容超过卡片大小时显示滚动条 */
   padding: 20px; /* 增加卡片内边距 */
 }
 .card-content {
   display: flex;
-  flex-direction: column; /* 垂直排列标题和正文 */
-  justify-content: center; /* 水平居中 */
-  align-items: center; /* 垂直居中 */
-  height: 100%; /* 内容占满卡片高度 */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .title {
@@ -386,6 +330,28 @@ export default {
   text-transform: none; /* 文本大小写转换 */
   text-decoration: none; /* 文本装饰 */
   text-align: center;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.festival {
+  width: 45%; /* 每个节日容器占据总宽度的一半 */
+  text-align: center; /* 文字居中显示 */
+}
+.festival img {
+  width: 100%; /* 图片宽度自适应容器 */
+  height: auto; /* 图片高度自动 */
+}
+.festival p {
+  font-family: 'Microsoft YaHei', 微软雅黑, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: black; /* 将文字颜色修改为黑色 */
+  padding: 10px; /* 文本周围的间距 */
 }
 
 .body-content {
