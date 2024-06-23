@@ -1,84 +1,90 @@
 <template>
-  <div class="cluture-container">
-    <div class="sections">
-      <div class="top-section" :style="{ height: topHeight + 'px' }">
-        <!-- 顶部内容 -->
-        <el-card :style="{ width: cardWidth + 'px', height: cardHeight + 'px', backgroundColor: cardBackgroundColor, top: cardTop + 'px', left: cardLeft + 'px', position: 'absolute', borderRadius: '15px', marginTop: cardMarginTop + 'px' }">
-          <div class="card-content">
-            <h1 class="title">自然与动物</h1>
-            <p class="text">
-              九寨沟是中国第一个以保护自然风景为主要目的的自然保护区。保护区森林覆盖率超过80%，藤本植物有38种，名贵中药有冬虫夏草、雪莲、雪茶、川贝母、天麻等。有74种国家保护珍稀植物，18种国家保护动物。
-            </p>
-            <p class="text">
-              九寨沟国家级自然保护区有陆栖脊椎动物122种，其中兽类21种，鸟类93种，爬行类4种，两栖类4种。拥有国家级保护动物，一级有大熊猫、金丝猴、豹、白唇鹿、扭角羚、绿尾虹雉；二级有猕猴、小熊猫、林麝、斑羚、蓝马鸡、红腹锦鸡、红腹角雉、斑尾榛鸡、雉鹑、金雕等。
-            </p>
-          </div>
-        </el-card>
-        <!-- 大卡片1，包含三个小卡片 -->
-        <div class="large-card">
-          <div class="header">植物资源</div>
-          <i class="fa fa-chevron-left carousel-arrow left-arrow" aria-hidden="true" @click="prevSlide"></i>
-          <div class="carousel-container">
-            <div v-for="(card, index) in visibleCards" :key="index" class="small-card">
-              <el-card>
-                <img :src="card.image" :alt="card.title" class="image">
-                <div class="card-description">
-                  <h3>{{ card.title }}</h3>
-                  <p>{{ card.description }}</p>
-                </div>
-              </el-card>
+  <div class="home">
+    <div class="cluture-container">
+      <div class="sections">
+        <div class="top-section" :style="{ height: topHeight + 'px' }">
+          <!-- 顶部内容 -->
+          <el-card :style="{ width: cardWidth + 'px', height: cardHeight + 'px', backgroundColor: cardBackgroundColor, top: cardTop + 'px', left: cardLeft + 'px', position: 'absolute', borderRadius: '15px', marginTop: cardMarginTop + 'px' }">
+            <div class="card-content">
+              <h1 class="title">自然与动物</h1>
+              <p class="text">
+                九寨沟是中国第一个以保护自然风景为主要目的的自然保护区。保护区森林覆盖率超过80%，藤本植物有38种，名贵中药有冬虫夏草、雪莲、雪茶、川贝母、天麻等。有74种国家保护珍稀植物，18种国家保护动物。
+              </p>
+              <p class="text">
+                九寨沟国家级自然保护区有陆栖脊椎动物122种，其中兽类21种，鸟类93种，爬行类4种，两栖类4种。拥有国家级保护动物，一级有大熊猫、金丝猴、豹、白唇鹿、扭角羚、绿尾虹雉；二级有猕猴、小熊猫、林麝、斑羚、蓝马鸡、红腹锦鸡、红腹角雉、斑尾榛鸡、雉鹑、金雕等。
+              </p>
             </div>
-          </div>
-          <i class="fa fa-chevron-right carousel-arrow right-arrow" aria-hidden="true" @click="nextSlide"></i>
-        </div>
-        <!-- 大卡片2，包含三个小卡片 -->
-        <div class="large-card2" :style="{ top: secondCardTop + 'px' }">
-          <div class="header">稀有动物</div>
-          <i class="fa fa-chevron-left carousel-arrow left-arrow" aria-hidden="true" @click="prevSlide2"></i>
-          <div class="carousel-container">
-            <div v-for="(card, index) in visibleCards2" :key="index" class="small-card">
-              <el-card>
-                <img :src="card.image" :alt="card.title" class="image">
-                <div class="card-description">
-                  <h3>{{ card.title }}</h3>
-                  <p>{{ card.description }}</p>
-                </div>
-              </el-card>
+          </el-card>
+          <!-- 大卡片1，包含三个小卡片 -->
+          <div class="large-card">
+            <div class="header">植物资源</div>
+            <i class="fa fa-chevron-left carousel-arrow left-arrow" aria-hidden="true" @click="prevSlide"></i>
+            <div class="carousel-container">
+              <div v-for="(card, index) in visibleCards" :key="index" class="small-card">
+                <el-card>
+                  <img :src="card.image" :alt="card.title" class="image">
+                  <div class="card-description">
+                    <h3>{{ card.title }}</h3>
+                    <p>{{ card.description }}</p>
+                  </div>
+                </el-card>
+              </div>
             </div>
+            <i class="fa fa-chevron-right carousel-arrow right-arrow" aria-hidden="true" @click="nextSlide"></i>
           </div>
-          <i class="fa fa-chevron-right carousel-arrow right-arrow" aria-hidden="true" @click="nextSlide2"></i>
-        </div>
-
-        <!-- 大卡片3，包含三个小卡片 -->
-        <div class="large-card3" :style="{ top: thirdCardTop + 'px' }">
-          <div class="header">昆虫资源</div>
-          <i class="fa fa-chevron-left carousel-arrow left-arrow" aria-hidden="true" @click="prevSlide3"></i>
-          <div class="carousel-container">
-            <div v-for="(card, index) in visibleCards3" :key="index" class="small-card">
-              <el-card>
-                <img :src="card.image" :alt="card.title" class="image">
-                <div class="card-description">
-                  <h3>{{ card.title }}</h3>
-                  <p>{{ card.description }}</p>
-                </div>
-              </el-card>
+          <!-- 大卡片2，包含三个小卡片 -->
+          <div class="large-card2" :style="{ top: secondCardTop + 'px' }">
+            <div class="header">稀有动物</div>
+            <i class="fa fa-chevron-left carousel-arrow left-arrow" aria-hidden="true" @click="prevSlide2"></i>
+            <div class="carousel-container">
+              <div v-for="(card, index) in visibleCards2" :key="index" class="small-card">
+                <el-card>
+                  <img :src="card.image" :alt="card.title" class="image">
+                  <div class="card-description">
+                    <h3>{{ card.title }}</h3>
+                    <p>{{ card.description }}</p>
+                  </div>
+                </el-card>
+              </div>
             </div>
+            <i class="fa fa-chevron-right carousel-arrow right-arrow" aria-hidden="true" @click="nextSlide2"></i>
           </div>
-          <i class="fa fa-chevron-right carousel-arrow right-arrow" aria-hidden="true" @click="nextSlide3"></i>
+
+          <!-- 大卡片3，包含三个小卡片 -->
+          <div class="large-card3" :style="{ top: thirdCardTop + 'px' }">
+            <div class="header">昆虫资源</div>
+            <i class="fa fa-chevron-left carousel-arrow left-arrow" aria-hidden="true" @click="prevSlide3"></i>
+            <div class="carousel-container">
+              <div v-for="(card, index) in visibleCards3" :key="index" class="small-card">
+                <el-card>
+                  <img :src="card.image" :alt="card.title" class="image">
+                  <div class="card-description">
+                    <h3>{{ card.title }}</h3>
+                    <p>{{ card.description }}</p>
+                  </div>
+                </el-card>
+              </div>
+            </div>
+            <i class="fa fa-chevron-right carousel-arrow right-arrow" aria-hidden="true" @click="nextSlide3"></i>
+          </div>
+
+
+
         </div>
-
-
-
-      </div>
-      <div class="bottom-section" :style="{ height: bottomHeight + 'px' }">
-        <!-- 底部内容 -->
+        <div class="bottom-section" :style="{ height: bottomHeight + 'px' }">
+          <!-- 底部内容 -->
+        </div>
       </div>
     </div>
+    <app-footer></app-footer>
   </div>
 </template>
 <script>
+import AppFooter from "@/components/AppFooter.vue";
+
 export default {
   name: 'Cluture',
+  components: {AppFooter},
   data() {
     return {
       topHeight: 1000, // 上半背景长度
@@ -176,7 +182,14 @@ export default {
 };
 </script>
 
-<style scoped>@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400&display=swap');
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400&display=swap');
+
+.home {
+  position: relative; /* 确保父容器有相对定位或绝对定位 */
+  min-height: 100vh; /* 确保内容高度至少为视口高度，以便页脚可以在底部 */
+  padding-bottom: 90px; /* 为页脚预留空间，避免内容覆盖 */
+}
 
 .cluture-container {
   display: flex;
