@@ -36,7 +36,7 @@
       <div class="carousel">
         <!--      <i class="fa fa-chevron-left carousel-arrow left-arrow" aria-hidden="true" @click="prevSlide('second')"></i>-->
         <div class="carousel-container">
-          <div v-for="(card, index) in visibleCards1" :key="index" class="carousel-card">
+          <div v-for="(card, index) in visibleCards2" :key="index" class="carousel-card">
             <figure class="image-figure">
               <img :src="card.image" :alt="card.title" class="image">
             </figure>
@@ -61,7 +61,7 @@
       <div class="carousel">
         <i class="fa fa-chevron-left carousel-arrow left-arrow" aria-hidden="true" @click="prevSlide('third')"></i>
         <div class="carousel-container">
-          <div v-for="(card, index) in visibleCards1" :key="index" class="carousel-card">
+          <div v-for="(card, index) in visibleCards3" :key="index" class="carousel-card">
             <figure class="image-figure">
               <img :src="card.image" :alt="card.title" class="image">
             </figure>
@@ -86,7 +86,7 @@
       <div class="carousel">
         <i class="fa fa-chevron-left carousel-arrow left-arrow" aria-hidden="true" @click="prevSlide('fourth')"></i>
         <div class="carousel-container">
-          <div v-for="(card, index) in visibleCards1" :key="index" class="carousel-card">
+          <div v-for="(card, index) in visibleCards4" :key="index" class="carousel-card">
             <figure class="image-figure">
               <img :src="card.image" :alt="card.title" class="image">
             </figure>
