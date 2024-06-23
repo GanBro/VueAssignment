@@ -3,7 +3,7 @@
 <template>
   <div class="page-container">
     <Navbar />
-    <el-carousel :interval="5000" height="100vh" arrow="always" class="carousel-container">
+    <el-carousel :interval="5000" height="100vh" arrow="always" class="carousel-container" motion-blur>
       <el-carousel-item v-for="(item, index) in items" :key="index">
         <div class="fullscreen-div">
           <img :src="item.image" alt="Image" />
@@ -143,11 +143,15 @@
     <el-row>
       <el-col :span="8" class="custom-text" style="margin-left: 50px">
         视频
-        <img src="@/assets/首页/视频.png" alt="视频" height="73%">
+        <img src="@/assets/首页/视频.png" alt="视频" style="height: 70%;width: 80%">
       </el-col>
       <el-col :span="15" class="custom-text">
         热点资讯
-        <img src="@/assets/首页/热点资讯.png" alt="热点资讯">
+        <el-carousel :interval="5000" indicator-position="none" motion-blur>
+          <el-carousel-item v-for="item in items1" :key="item.id">
+            <img :src="item.src" :alt="item.alt" style="height: 100%;">
+          </el-carousel-item>
+        </el-carousel>
       </el-col>
     </el-row>
 
@@ -183,6 +187,11 @@ export default {
           title: '碧水微澜',
           subtitle: '湛蓝的水，青翠的树，山中画，画中意，犹如仙境。',
         },
+      ],
+      items1: [
+        { id: 1, src: "src/assets/首页/热点资讯1.png", alt: "热点资讯1" },
+        { id: 2, src: "src/assets/首页/热点资讯2.png", alt: "热点资讯2" },
+        { id: 3, src: "src/assets/首页/热点资讯3.png", alt: "热点资讯3" },
       ],
       newsList: [
         { title: '“粤”见九寨——2024年九寨沟推介活动在广州举行', date: '2024-06-18' },
@@ -373,13 +382,12 @@ export default {
   font-variant: normal;
   text-transform: none;
   text-decoration: none solid rgb(102, 102, 102);
-  text-align: center; /* 设置为居中对齐 */
+  text-align: center;
   text-indent: 0px;
 }
 
 .custom-text img {
   display: block;
   margin: 0 auto;
-  width: 80%; /* 根据需要调整图像宽度 */
 }
 </style>
