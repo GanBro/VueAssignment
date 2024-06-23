@@ -6,7 +6,7 @@
     <el-carousel :interval="5000" height="100vh" arrow="always" class="carousel-container" motion-blur>
       <el-carousel-item v-for="(item, index) in items" :key="index">
         <div class="fullscreen-div">
-          <img :src="item.image" alt="Image" />
+          <img :src="item.image" alt="Image"/>
         </div>
         <!-- 添加一个包含大字的div -->
         <div class="text-container">
@@ -155,6 +155,14 @@
       </el-col>
     </el-row>
 
+    <el-row class="news-header" style="margin-left: 42%">
+      旅行 · 服务
+    </el-row>
+    
+    <el-row>
+      <img src="@/assets/首页/旅行服务.png" style="margin-left: 10%; width: 80%">
+    </el-row>
+
   </div>
 
 </template>
@@ -229,7 +237,6 @@ export default {
 .page-container {
   position: relative;
   width: 100vw;
-  height: 200vh; /* 改为200vh以允许垂直滚动 */
   overflow-y: auto; /* 允许垂直滚动 */
   overflow-x: hidden; /* 禁止水平滚动 */
 }
@@ -247,7 +254,6 @@ export default {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  overflow-x: hidden; /* 禁止水平滚动 */
 }
 
 .fullscreen-div img {
