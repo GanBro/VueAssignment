@@ -10,8 +10,8 @@
       <div class="footer-last-line">
         <p class="report-center">中国互联网举报中心 成都理工大学工程技术学院互联网举报中心</p>
         <div class="footer-icons-right">
-          <font-awesome-icon icon="fa-brands fa-weixin" class="icon" />
-          <font-awesome-icon icon="fa-brands fa-qq" class="icon" />
+          <font-awesome-icon icon="fa-brands fa-weixin" class="icon" @click="openWeChat" />
+          <font-awesome-icon icon="fa-brands fa-qq" class="icon" @click="openQQ" />
           <font-awesome-icon icon="fa-brands fa-weibo" class="icon" />
           <font-awesome-icon icon="fa-brands fa-facebook" class="icon" />
           <font-awesome-icon icon="fa-brands fa-twitter" class="icon" />
@@ -24,8 +24,21 @@
 <script>
 export default {
   name: "AppFooter",
+  methods: {
+    openWeChat() {
+      // const weChatQrCodeUrl = 'https://u.wechat.com/MIy2TFA0wfao0LykuanKzqM';
+      const weChatQrCodeUrl = 'https://qm.qq.com/q/7jiyQYlNGo';
+      window.open(weChatQrCodeUrl, '_blank');
+    },
+    openQQ() {
+      window.open(`https://qm.qq.com/q/7jiyQYlNGo`, '_blank');
+    }
+  }
 };
 </script>
+
+
+
 
 <style scoped>
 .footer {
