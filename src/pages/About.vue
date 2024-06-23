@@ -206,6 +206,7 @@
         <br><br>
       </div>
     </div>
+    <el-backtop :right="100" :bottom="100" />
     <app-footer></app-footer>
   </div>
 

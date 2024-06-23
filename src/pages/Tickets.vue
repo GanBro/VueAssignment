@@ -40,7 +40,7 @@
           <router-link to="/announcement" class="announcement-link">点击进入公告</router-link>
         </div>
       </el-card>
-
+      <el-backtop :right="100" :bottom="100" />
       <!-- 引入底栏组件 -->
       <AppFooter />
     </el-row>
