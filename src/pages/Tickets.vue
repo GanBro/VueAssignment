@@ -13,18 +13,18 @@
           景区门票价格
         </div>
         <el-row class="cards-container" gutter="20">
-          <el-col :span="6" v-for="(card, index) in cards" :key="index">
+          <el-col :span="6" v-for="(ticket, index) in allTickets" :key="index">
             <el-card shadow="hover" class="small-card">
-              <div class="small-card-header">{{ card.title }}</div>
+              <div class="small-card-header">{{ ticket.title }}</div>
               <div class="small-card-price">
-                <span class="price">{{ card.price }}</span>
+                <span class="price">{{ ticket.price }}</span>
                 <span class="unit">/人</span>
               </div>
               <ul class="small-card-details">
-                <li class="card-detail">{{ card.startDate }}</li>
-                <li class="card-detail">{{ card.endDate }}</li>
+                <li class="card-detail">{{ ticket.startDate }}</li>
+                <li class="card-detail">{{ ticket.endDate }}</li>
               </ul>
-              <el-button type="primary" class="small-card-button" @click="buyTicket">点击购买</el-button>
+              <el-button type="primary" class="small-card-button" @click="buyTicket(ticket)">点击购买</el-button>
             </el-card>
           </el-col>
         </el-row>
@@ -56,35 +56,10 @@ export default {
   components: {
     AppFooter,
   },
-  data() {
-    return {
-      cards: [
-        {
-          title: '旺季门票',
-          price: '¥190',
-          startDate: '执行日期：4月1日起',
-          endDate: '截止日期：11月15日止'
-        },
-        {
-          title: '旺季观光车票',
-          price: '¥90',
-          startDate: '执行日期：4月1日起',
-          endDate: '截止日期：11月15日止'
-        },
-        {
-          title: '淡季门票',
-          price: '¥80',
-          startDate: '执行日期：11月16日起',
-          endDate: '截止日期：次年3月31日止'
-        },
-        {
-          title: '淡季观光车票',
-          price: '¥80',
-          startDate: '执行日期：11月16日起',
-          endDate: '截止日期：次年3月31日止'
-        }
-      ]
-    };
+  computed: {
+    allTickets() {
+      return this.$store.getters.allTickets;
+    }
   },
   methods: {
     buyTicket() {

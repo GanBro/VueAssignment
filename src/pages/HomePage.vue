@@ -168,11 +168,10 @@
     <el-backtop :right="100" :bottom="100" />
     <app-footer></app-footer>
   </div>
-
-
 </template>
 
 <script>
+import { mapState } from 'vuex';
 import Navbar from '@/components/AppNavbar.vue';
 import image1 from '@/assets/首页/春深似海.png';
 import image2 from '@/assets/首页/一碧千里.png';
@@ -208,38 +207,19 @@ export default {
         { id: 2, src: "src/assets/首页/热点资讯2.png", alt: "热点资讯2" },
         { id: 3, src: "src/assets/首页/热点资讯3.png", alt: "热点资讯3" },
       ],
-      newsList: [
-        { title: '“粤”见九寨——2024年九寨沟推介活动在广州举行', date: '2024-06-18' },
-        { title: '九寨沟最新发布并启动扎如沟研学旅游线路', date: '2024-06-18' },
-        { title: '九寨沟国家级自然保护区圆满完成2570亩灾损生态创面修复实验性飞播造林', date: '2024-06-13' },
-        { title: '保护世界遗产，建设美丽中国——九寨沟管理局代表荣获表彰', date: '2024-06-08' },
-        { title: '2024年“文化和自然遗产日”九寨沟“专家说遗产”主题活动成功举办', date: '2024-06-08' },
-        { title: '九寨沟工作站参加国教科文组织国际自然与文化遗产培训', date: '2024-05-29' },
-        { title: '建标准 优服务 强管理 树品牌——九寨沟管理局举办标准化管理培训班', date: '2024-05-23' },
-        { title: '践行生态文明，弘扬生态文化——九寨沟生态文化展览馆揭幕', date: '2024-05-22' },
-        { title: '扬体育精神 展九寨风采——九寨沟管理局举办第十四届职工运动会', date: '2024-05-14' },
-        { title: '九寨沟管理局组织开展“512”防灾减灾主题宣传活动', date: '2024-05-12' },
-        { title: '九寨沟管理局受邀参加国教科文组织国际自然与文化遗产培训', date: '2024-05-09' },
-        { title: '九寨沟景区圆满完成“五一”假期旅游接待工作', date: '2024-05-05' }
-      ],
-      announcements: [
-        { title: '售罄通告', date: '2024-05-02' },
-        { title: '“五一”假期票务预售情况通告', date: '2024-05-01' },
-        { title: '九寨沟风景名胜区关于对劳动模范实行“五一”假期免门票的公告', date: '2024-04-28' },
-        { title: '关于调整开园时间的通告', date: '2024-03-30' },
-        { title: '九寨沟管理局关于“三八”妇女节实行优惠政策的公告', date: '2024-03-04' }
-      ],
-      visitorStats: [
-        { title: '九寨沟景区共接待19051人次', date: '2024-06-21' },
-        { title: '九寨沟景区共接待17874人次', date: '2024-06-20' },
-        { title: '九寨沟景区共接待18432人次', date: '2024-06-19' },
-        { title: '九寨沟景区共接待16858人次', date: '2024-06-18' },
-        { title: '九寨沟景区共接待18301人次', date: '2024-06-17' }
-      ],
     };
+  },
+  computed: {
+    ...mapState({
+      newsList: state => state.newsList,
+      announcements: state => state.announcements,
+      visitorStats: state => state.visitorStats,
+      specialItems: state => state.specialItems,
+    }),
   },
 };
 </script>
+
 <style>
 .home {
   position: relative; /* 确保父容器有相对定位或绝对定位 */
