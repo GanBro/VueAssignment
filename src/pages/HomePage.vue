@@ -139,7 +139,20 @@
         </el-col>
       </el-row>
     </div>
+
+    <el-row>
+      <el-col :span="8" class="custom-text" style="margin-left: 50px">
+        视频
+        <img src="@/assets/首页/视频.png" alt="视频" height="73%">
+      </el-col>
+      <el-col :span="15" class="custom-text">
+        热点资讯
+        <img src="@/assets/首页/热点资讯.png" alt="热点资讯">
+      </el-col>
+    </el-row>
+
   </div>
+
 </template>
 
 <script>
@@ -346,5 +359,27 @@ export default {
   font-size: 14px;
   color: #fff;
 }
+.custom-text {
+  font-family: muli, sans-serif, Tahoma, Geneva, Arial, "Microsoft YaHei", 微软雅黑;
+  font-size: 24px;
+  color: #666666;
+  background-color: rgba(0, 0, 0, 0);
+  line-height: 60px;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  word-spacing: 0px;
+  font-weight: 700;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none solid rgb(102, 102, 102);
+  text-align: center; /* 设置为居中对齐 */
+  text-indent: 0px;
+}
 
+.custom-text img {
+  display: block;
+  margin: 0 auto;
+  width: 80%; /* 根据需要调整图像宽度 */
+}
 </style>
